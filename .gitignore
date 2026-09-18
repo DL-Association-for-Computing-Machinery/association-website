@@ -1,0 +1,9 @@
+.scratch/InkWords/
+.scratch/load-balanced-online-oj/
+.playwright-cli/
+draft_*/
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
