@@ -8,6 +8,8 @@
 - [飞书需求读取记录](docs/research/association-requirements-from-feishu.md)
 - [微信公众号文章研究](docs/research/2026-09-wechat-traecode-knowledge-wiki.md)
 - [相关项目研究：InkWords 与 Online Judge](docs/research/2026-09-related-projects.md)
+- [协作规范](CONTRIBUTING.md)
+- [飞书 CLI 接入流程](docs/development/feishu-cli-runbook.md)
 
 ## 关联项目
 
