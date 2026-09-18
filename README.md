@@ -9,6 +9,7 @@
 - [MVP 需求文档读取记录](docs/research/2026-09-mvp-requirements.md)
 - [微信公众号文章研究](docs/research/2026-09-wechat-traecode-knowledge-wiki.md)
 - [相关项目研究：InkWords 与 Online Judge](docs/research/2026-09-related-projects.md)
+- [GeekPie 竞品架构笔记](docs/research/2026-09-geekpie-architecture-notes.md)
 - [协作规范](CONTRIBUTING.md)
 - [GitHub Issue 协作流程](docs/development/github-issue-workflow.md)
 - [飞书 CLI 接入流程](docs/development/feishu-cli-runbook.md)
