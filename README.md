@@ -12,6 +12,7 @@
 - [协作规范](CONTRIBUTING.md)
 - [GitHub Issue 协作流程](docs/development/github-issue-workflow.md)
 - [飞书 CLI 接入流程](docs/development/feishu-cli-runbook.md)
+- [仓库基建检查清单](docs/development/repository-bootstrap-checklist.md)
 
 ## 关联项目
 

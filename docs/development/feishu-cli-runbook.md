@@ -33,9 +33,9 @@ lark-cli user get-current
 先读取空间和节点结构，再读取具体文档正文。记录来源 URL、文档标题、读取日期和是否经过人工审核：
 
 ```bash
-lark-cli wiki space list
-lark-cli wiki node list --space-id <space_id>
-lark-cli docs get --document-id <document_id>
+lark-cli wiki +space-list
+lark-cli wiki +node-list --space-id <space_id>
+lark-cli docs +fetch --doc <document_url_or_token> --doc-format markdown
 ```
 
 附件、图片和表格按需单独读取；不要把整个知识库无筛选地复制到公开站点。
@@ -45,15 +45,21 @@ lark-cli docs get --document-id <document_id>
 向开发小队同步时使用用户身份发送，内容保持“变更摘要 + 仓库/文档链接 + 下一步”：
 
 ```bash
-lark-cli im chat search --query "协会官网开发小队"
-lark-cli im message send --chat-id <chat_id> --text "<摘要>\n仓库：<url>\n文档：<url>"
+lark-cli im +chat-search --query "协会官网开发小队"
+lark-cli im +messages-send --chat-id <chat_id> --text "<摘要>\n仓库：<url>\n文档：<url>"
 ```
 
 发送前确认目标群和公开范围；消息只包含公开项目资料，不转发令牌、内部成员信息或未审核原文。
 
 ## 文档同步约定
 
-“计算机协会”文档使用固定章节：项目结论、需求表与验收基线、产品阶段规划、内容治理与发布流程、研究依据、代码与协作入口、下一步。更新时优先整体重排正文，避免无限追加造成重复。
+“计算机协会”文档使用固定章节：项目结论、需求表与验收基线、MVP 需求文档内联摘要、产品阶段规划、内容治理与发布流程、研究依据、代码与协作入口、协作开发规范、GitHub Issue 驱动流程、飞书 CLI 复用流程、下一步。更新时优先整体重排正文，避免无限追加造成重复。
+
+整体重排前先保存仓库中的 Markdown 草稿，更新后用 `+fetch --scope outline` 核对标题层级和顺序；写入失败时不要重复重试，先重新读取最新 revision。需要整体替换时使用：
+
+```bash
+lark-cli docs +update --doc <document_url_or_token> --command overwrite --doc-format markdown --content @<draft.md>
+```
 
 本项目当前文档入口：
 
@@ -67,4 +73,3 @@ lark-cli im message send --chat-id <chat_id> --text "<摘要>\n仓库：<url>\n�
 - 读取失败：保留仓库上一版内容，记录失败原因，不让构建依赖实时飞书服务。
 - 发送失败：不要循环重试；确认 `im:message.send_as_user` 已审核，并检查目标群可见性。
 - 内容有隐私或版权疑点：标记为草稿，暂停发布，交由发布负责人确认。
-

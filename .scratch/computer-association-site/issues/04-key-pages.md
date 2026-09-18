@@ -6,9 +6,10 @@
 
 **Status:** ready-for-agent
 
+**GitHub Issue:** [#5](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/5)
+
 - [ ] 活动列表支持年份或类型筛选，并能进入详情
 - [ ] 成果页突出四项全国性竞赛荣誉并保留来源
 - [ ] 知识页只展示公开审核内容，并能回到来源说明
 - [ ] 加入页覆盖零基础、新生和竞赛方向的参与路径
 - [ ] 列表为空、图片缺失和外部链接不可用时有可理解的提示
-

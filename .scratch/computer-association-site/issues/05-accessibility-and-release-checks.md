@@ -6,9 +6,10 @@
 
 **Status:** ready-for-agent
 
+**GitHub Issue:** [#6](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/6)
+
 - [ ] 关键页面通过标题层级、跳过导航和可见焦点检查
 - [ ] 移动端导航和加入入口可全程键盘操作
 - [ ] 图片、链接和表单字段均有可访问名称或替代文本
 - [ ] 运行构建、链接检查和静态预览检查
 - [ ] 检查失败时返回非零状态，成功时输出发布摘要
-

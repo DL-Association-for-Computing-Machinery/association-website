@@ -6,8 +6,9 @@
 
 **Status:** ready-for-agent
 
+**GitHub Issue:** [#3](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/3)
+
 - [ ] 首页展示协会定位、近期活动、四项荣誉和加入入口
 - [ ] 六类页面具备可访问的路由或页面入口
 - [ ] 移动端导航可用，支持键盘、焦点和当前页状态
 - [ ] 页面在窄屏和宽屏下无横向溢出
-

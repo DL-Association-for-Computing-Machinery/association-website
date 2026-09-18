@@ -6,9 +6,10 @@
 
 **Status:** ready-for-agent
 
+**GitHub Issue:** [#7](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/7)
+
 - [ ] `main`、`develop`、feature、release、hotfix 分支约定可执行
 - [ ] CI 或等价检查能在 PR 中运行构建与发布前检查
 - [ ] 飞书 CLI 授权、读取、文档更新和群消息流程有可复用说明
 - [ ] 同步失败时保留上一版静态内容并记录原因
 - [ ] 完成一次预发布 smoke test，并记录发布入口和回滚方式
-
