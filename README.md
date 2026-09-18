@@ -13,6 +13,10 @@
 - [GitHub Issue 协作流程](docs/development/github-issue-workflow.md)
 - [飞书 CLI 接入流程](docs/development/feishu-cli-runbook.md)
 - [仓库基建检查清单](docs/development/repository-bootstrap-checklist.md)
+- [页面信息架构与验收](docs/product/page-information-architecture.md)
+- [公开内容模型与审核规范](docs/content/public-content-governance.md)
+- [MVP 技术决策与部署边界](docs/development/mvp-architecture-boundary.md)
+- [测试、发布与回滚检查清单](docs/development/release-checklist.md)
 
 ## 关联项目
 
