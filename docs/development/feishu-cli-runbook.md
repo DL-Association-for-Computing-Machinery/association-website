@@ -64,7 +64,7 @@ lark-cli docs +update --doc <document_url_or_token> --command overwrite --doc-fo
 本项目当前文档入口：
 
 - 需求源：[计协官网建设需求](https://ecut-acm.feishu.cn/wiki/Vewnw2HINigCqHktO9Sc5wYtnpc)
-- 项目文档：[协会官网项目索引](https://ecut-acm.feishu.cn/docx/AVVudBlQ4oTJTuxWS7Yc9gjFnmb)
+- 项目文档：[协会官网项目索引](https://ecut-acm.feishu.cn/docx/AVVudBlQ4oTJTuxWS7Yc9gjFnmb)，已迁移到“计算机协会官网”知识库的“MVP需求文档”根节点下
 - GitHub：[DL-Association-for-Computing-Machinery](https://github.com/DL-Association-for-Computing-Machinery)
 
 ## 故障处理
