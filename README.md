@@ -2,8 +2,13 @@
 
 协会官网项目的需求、研究记录和实现代码。
 
+截至 2026-09-19，本仓库已完成无代码内容与设计基建，尚未初始化应用、CI 或部署。GitHub #2 的四项全国性成绩尚缺两项证据，保持未完成；#3–#7 按依赖等待实现。无需另设人工素材审核人。
+
 ## 当前文档
 
+- [产品事实与范围](PRODUCT.md)
+- [无代码设计简报与视觉令牌](docs/product/design-brief.md)
+- [首批素材、公开文案与 AI 自审记录](docs/content/launch-content-pack.md)
 - [官网 Spec](.scratch/computer-association-site/spec.md)
 - [飞书需求读取记录](docs/research/association-requirements-from-feishu.md)
 - [MVP 需求文档读取记录](docs/research/2026-09-mvp-requirements.md)
