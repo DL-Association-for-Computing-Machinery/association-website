@@ -17,6 +17,8 @@
 
 ## 当前约束
 
+- 用户已明确授权配置 ESLint 与 Prettier：仓库提供 pnpm 检查/格式化命令与锁文件，仅为开发工具基建，不表示已初始化网站应用。Logo 源件说明见 `docs/content/assets/README.md`。
+
 - 仓库已建立 Spec、MVP 与后续阶段票据、协作规范和内容/设计基建；尚未初始化网站应用。七位执行成员的主责、交叉审阅及依赖见 `docs/development/issue-assignment-plan.md`；本轮仅分配任务，不进行代码实现。
 - 2026-09-19 用户明确授权复用协会知识库素材并由 AI 自行审核，无需另设人工内容审核人。执行规则见 `docs/content/public-content-governance.md`。
 - 首版优先解决宣传与内容发布，不先做复杂后台、账号体系或实时数据同步。
