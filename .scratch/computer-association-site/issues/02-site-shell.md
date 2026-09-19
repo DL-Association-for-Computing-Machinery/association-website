@@ -4,11 +4,11 @@
 
 **Blocked by:** 01: 建立公开内容样例与品牌令牌
 
-**Status:** ready-for-agent
+**Status:** blocked
 
 **GitHub Issue:** [#3](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/3)
 
-- [ ] 首页展示协会定位、近期活动、四项荣誉和加入入口
+- [ ] 首页展示协会定位、近期活动或历史回顾、四项荣誉和加入入口；只使用已核验素材
 - [ ] 六类页面具备可访问的路由或页面入口
 - [ ] 移动端导航可用，支持键盘、焦点和当前页状态
 - [ ] 页面在窄屏和宽屏下无横向溢出

@@ -4,7 +4,7 @@
 
 **Blocked by:** 01: 建立公开内容样例与品牌令牌
 
-**Status:** ready-for-agent
+**Status:** blocked
 
 **GitHub Issue:** [#4](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/4)
 

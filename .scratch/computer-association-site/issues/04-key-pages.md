@@ -4,7 +4,7 @@
 
 **Blocked by:** 02: 建立响应式官网骨架; 03: 实现公开内容筛选与构建检查
 
-**Status:** ready-for-agent
+**Status:** blocked
 
 **GitHub Issue:** [#5](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/5)
 

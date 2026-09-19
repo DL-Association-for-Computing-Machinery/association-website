@@ -12,6 +12,8 @@
 
 首个 MVP 之前若 `develop` 尚未建立，先从 `main` 创建；之后所有功能分支统一从 `develop` 创建。
 
+文档基线已先进入 `main` 而 `develop` 落后时，文档修订可从最新 `main` 创建 `codex/<ticket>-<slug>` 并提交到 `main` 的 PR，避免丢失已确认决策。应用实现开始前先同步 `main` 到 `develop`。`release/<version>` 从 `develop` 创建，验收后通过 PR 合入 `main`，为发布提交打版本标签，再将 `main` 合回 `develop`。
+
 ## 提交
 
 提交信息使用 Conventional Commits，主题使用简体中文：
@@ -39,11 +41,11 @@ PR 标题沿用提交格式。提交前必须：
 1. 关联一个 `.scratch/computer-association-site/issues/` ticket。
 2. 运行项目提供的最小验证命令，并在 PR 中记录结果。
 3. 检查公开内容是否经过脱敏，图片是否有来源和替代文本。
-4. 至少一名协会成员审阅后再合并。
+4. 代码变更至少一名协会成员审阅；文档与协会素材按用户授权可由 AI 自审，保留来源与结论，无需另设人工内容审核人。
 
 合并策略使用 squash merge，保持 `main` 和 `develop` 历史可读。
 
-当前仓库为 GitHub Free 私有仓库，无法启用受保护分支规则；在升级方案或改为公开仓库前，`main` 只接受 PR、至少一名成员审阅和 squash merge 依靠团队约定执行。任何人发现绕过 PR 的直接推送，都应在群里提醒并补齐审阅记录。
+既有记录显示仓库为 GitHub Free 私有仓库，分支保护尚未配置；`main` 的 PR、适用审阅和 squash merge 依靠团队约定执行。改变仓库可见性或升级方案需单独决策。
 
 ## 代码与内容约定
 

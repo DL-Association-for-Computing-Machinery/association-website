@@ -1,10 +1,10 @@
 # 05: 完成可访问性与发布前检查
 
-**What to build:** 发布负责人可以用一条命令检查关键页面的标题层级、键盘操作、焦点、表单标签、图片替代文本、颜色对比和链接状态，并得到可读结果。
+**What to build:** 发布负责人可以用一条命令运行可自动化的语义、图片、对比度和链接检查，另按清单实测关键页面的键盘顺序、可见焦点与响应式布局，得到完整可追溯的结果。
 
 **Blocked by:** 04: 完成活动、成果、知识和加入页面
 
-**Status:** ready-for-agent
+**Status:** blocked
 
 **GitHub Issue:** [#6](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/6)
 
