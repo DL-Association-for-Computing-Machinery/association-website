@@ -15,6 +15,10 @@
 
 2026-09-19 静态核验：34 份 Markdown 相对链接无悬空；两项精选媒体可解码、尺寸与 SHA-256 符合登记且无 EXIF；主文字颜色组合对比度达到 4.5:1；原始导出被 Git 忽略。该结果不替代网站构建、页面预览或完整可访问性测试。
 
+同日同步核验：飞书[内容规范](https://ecut-acm.feishu.cn/docx/SZFcd5W2SoWLrexhEuhctFh2ntd)、[阶段规划索引](https://ecut-acm.feishu.cn/docx/AVVudBlQ4oTJTuxWS7Yc9gjFnmb)和[根目录索引](https://ecut-acm.feishu.cn/docx/X0NCdv0BmoN5QGxqCbPcBPn8nwc)均已局部更新并回读，保留既有表格与引用。本轮未发送群消息。独立只读文档复核发现一处审核主体歧义，已将 Spec 的逐条审核改为查看 AI 自审记录。
+
+[页面验收](https://ecut-acm.feishu.cn/docx/DfyTdNQ7Yo1qe1xTwRCcnWYenNB)和[发布检查](https://ecut-acm.feishu.cn/docx/TXzndiSDbo01pXxQH0Hcujtzn7m)也已同步手机布局、自审主体与无代码执行边界，共五份飞书文档回读通过。
+
 ## 尚未完成
 
 - [ ] 四项全国性竞赛成绩证据齐备，目前仅两条具体记录可引用，见素材包。
