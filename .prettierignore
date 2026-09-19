@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+dist/
+coverage/
+draft_*/
+.scratch/InkWords/
+.scratch/load-balanced-online-oj/
+.playwright-cli/
+pnpm-lock.yaml
+next-env.d.ts
+docs/content/assets/

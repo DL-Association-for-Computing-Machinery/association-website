@@ -4,16 +4,18 @@
 
 ## 来源登记
 
-| 编号 | 原始资料 | 本轮读取范围 |
-|---|---|---|
-| S01 | [计算机协会简介手册](https://ecut-acm.feishu.cn/wiki/DqRVwVPYIiJAuwkNjY9cH717nOc) | Word 正文与嵌入图片；简介、训练、ECPC 说明 |
-| S02 | [2025 年协会年度考核材料](https://ecut-acm.feishu.cn/wiki/P3U3wDTR8iHTElkrSnCcP9lKnuZ) | 正文关键词定位、负责人简介、新媒体章节及成果图片；不输出完整名单、电话或签名 |
-| S03 | [ECPC 参赛手册 1.0](https://ecut-acm.feishu.cn/wiki/P0lPwiToNiPE2Kk9RjDcPCRNnpc) | 协会简介、比赛规则、日程；年份由父节点“25.12.27 ECPC2026”与周六日期交叉核对 |
-| S04 | [艺术节游戏活动总结](https://ecut-acm.feishu.cn/wiki/WO0uwHPmfi5BkZkCMF4cA0HunBe) | 活动名称、任务内容、评价标准与复盘建议 |
-| S05 | [继往开来，偕行致远](https://ecut-acm.feishu.cn/wiki/MLqhwdMzjiBbduklU8acTmManue) | 欢迎页文字及合照，无拍摄日期记录 |
-| S06 | [计协 Logo 高清图](https://ecut-acm.feishu.cn/wiki/EIrFwVAbwiSgGwkISvocacC6nCf) | 下载原件并核验图形、格式、尺寸 |
-| S07 | [计算机协会介绍 PPT](https://ecut-acm.feishu.cn/wiki/FPxEwBoWbislTOkIipYc06p2nAh) | 提取文字核对活动与知识积累方式，不复用第三方演示模板装饰 |
-| S08 | [计协官网建设需求](https://ecut-acm.feishu.cn/wiki/Vewnw2HINigCqHktO9Sc5wYtnpc) | 再次确认首屏四项全国性竞赛成绩要求 |
+Logo 高清 PNG 与 SVG 官方源件已补充，尺寸、校验值、来源与使用限制见 [Logo 说明](assets/README.md)。SVG 内嵌 PNG，不作为真正矢量资源宣传；官网默认继续使用轻量 PNG。
+
+| 编号 | 原始资料                                                                               | 本轮读取范围                                                                 |
+| ---- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| S01  | [计算机协会简介手册](https://ecut-acm.feishu.cn/wiki/DqRVwVPYIiJAuwkNjY9cH717nOc)      | Word 正文与嵌入图片；简介、训练、ECPC 说明                                   |
+| S02  | [2025 年协会年度考核材料](https://ecut-acm.feishu.cn/wiki/P3U3wDTR8iHTElkrSnCcP9lKnuZ) | 正文关键词定位、负责人简介、新媒体章节及成果图片；不输出完整名单、电话或签名 |
+| S03  | [ECPC 参赛手册 1.0](https://ecut-acm.feishu.cn/wiki/P0lPwiToNiPE2Kk9RjDcPCRNnpc)       | 协会简介、比赛规则、日程；年份由父节点“25.12.27 ECPC2026”与周六日期交叉核对  |
+| S04  | [艺术节游戏活动总结](https://ecut-acm.feishu.cn/wiki/WO0uwHPmfi5BkZkCMF4cA0HunBe)      | 活动名称、任务内容、评价标准与复盘建议                                       |
+| S05  | [继往开来，偕行致远](https://ecut-acm.feishu.cn/wiki/MLqhwdMzjiBbduklU8acTmManue)      | 欢迎页文字及合照，无拍摄日期记录                                             |
+| S06  | [计协 Logo 高清图](https://ecut-acm.feishu.cn/wiki/EIrFwVAbwiSgGwkISvocacC6nCf)        | 下载原件并核验图形、格式、尺寸                                               |
+| S07  | [计算机协会介绍 PPT](https://ecut-acm.feishu.cn/wiki/FPxEwBoWbislTOkIipYc06p2nAh)      | 提取文字核对活动与知识积累方式，不复用第三方演示模板装饰                     |
+| S08  | [计协官网建设需求](https://ecut-acm.feishu.cn/wiki/Vewnw2HINigCqHktO9Sc5wYtnpc)        | 再次确认首屏四项全国性竞赛成绩要求                                           |
 
 来源链接供维护者追溯；可能要求飞书登录，不作为游客阅读正文或加入协会的必经入口。读取时间不等同于内容发生时间。
 
@@ -21,15 +23,15 @@
 
 所有下列条目的更新时间和审核时间均为 2026-09-19，审核主体为 Codex（AI）。标签、日期精度与状态在此明确，后续由 #4 映射为内容模型。
 
-| ID | 类型/标签 | 日期及精度 | 来源 | 审核结论/状态 |
-|---|---|---|---|---|
-| about-association | Article；协会介绍 | 原文未标注；不展示伪造日期 | S01、S03 | 简介交叉一致；可发布 |
-| activity-ai-prompt-2026 | Activity；AI、校园活动 | 2026-05-12，来自父节点名称；日精度 | S04 | 总结证明活动已发生；日期来源单独标明；可发布为历史回顾 |
-| activity-ecpc-third | Activity；算法、ECPC | 2025-12-27；日精度 | S03 | 名称中的 ECPC2026 不作为发生年份；可发布为历史赛事资料 |
-| article-prompt-basics | Article；AI、入门 | 2026-09-19；编辑日期 | S04 | 基于活动总结改编的学习稿，不冒充既有公众号文章；可发布 |
-| join-association | Link；加入、学习路径 | 2026-09-19；核验日期 | S01、S02、S07 | 公众号名称可引用；无可验证招新表单，不输出报名链接；可发布 |
-| achievement-lanqiao-15 | Achievement；算法、蓝桥杯 | 第十五届；届次精度，原段未给日期 | S02“社团负责人简介” | 原文明确周子彤获得 B 组全国二等奖；按成员个人成绩展示；可发布 |
-| achievement-ccpc-2025 | Achievement；算法、CCPC | 2025；年精度 | S02“社团负责人简介”及比赛照片 | 全国邀请赛（南昌）银牌；不能扩大为全国总决赛或协会团体总成绩；可发布 |
+| ID                      | 类型/标签                 | 日期及精度                         | 来源                          | 审核结论/状态                                                        |
+| ----------------------- | ------------------------- | ---------------------------------- | ----------------------------- | -------------------------------------------------------------------- |
+| about-association       | Article；协会介绍         | 原文未标注；不展示伪造日期         | S01、S03                      | 简介交叉一致；可发布                                                 |
+| activity-ai-prompt-2026 | Activity；AI、校园活动    | 2026-05-12，来自父节点名称；日精度 | S04                           | 总结证明活动已发生；日期来源单独标明；可发布为历史回顾               |
+| activity-ecpc-third     | Activity；算法、ECPC      | 2025-12-27；日精度                 | S03                           | 名称中的 ECPC2026 不作为发生年份；可发布为历史赛事资料               |
+| article-prompt-basics   | Article；AI、入门         | 2026-09-19；编辑日期               | S04                           | 基于活动总结改编的学习稿，不冒充既有公众号文章；可发布               |
+| join-association        | Link；加入、学习路径      | 2026-09-19；核验日期               | S01、S02、S07                 | 公众号名称可引用；无可验证招新表单，不输出报名链接；可发布           |
+| achievement-lanqiao-15  | Achievement；算法、蓝桥杯 | 第十五届；届次精度，原段未给日期   | S02“社团负责人简介”           | 原文明确周子彤获得 B 组全国二等奖；按成员个人成绩展示；可发布        |
+| achievement-ccpc-2025   | Achievement；算法、CCPC   | 2025；年精度                       | S02“社团负责人简介”及比赛照片 | 全国邀请赛（南昌）银牌；不能扩大为全国总决赛或协会团体总成绩；可发布 |
 
 ## 首页与协会简介
 
@@ -102,10 +104,10 @@
 
 ## 媒体与授权登记
 
-| 文件 | 尺寸/大小 | 来源与处理 | 替代文本 |
-|---|---|---|---|
-| [association-logo.png](assets/association-logo.png) | 640×640；118852 字节 | S06 原图缩小，保留透明通道、原比例和颜色；原文件名为 JPG，实际 PNG | 东华理工大学计算机协会标志 |
-| [association-group.webp](assets/association-group.webp) | 1600×1200；169084 字节 | S05 合照等比缩小为 WebP，无裁切；移除附加元数据 | 协会成员在教室内合影 |
+| 文件                                                    | 尺寸/大小              | 来源与处理                                                         | 替代文本                   |
+| ------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------ | -------------------------- |
+| [association-logo.png](assets/association-logo.png)     | 640×640；118852 字节   | S06 原图缩小，保留透明通道、原比例和颜色；原文件名为 JPG，实际 PNG | 东华理工大学计算机协会标志 |
+| [association-group.webp](assets/association-group.webp) | 1600×1200；169084 字节 | S05 合照等比缩小为 WebP，无裁切；移除附加元数据                    | 协会成员在教室内合影       |
 
 两项均为协会知识库素材，依据本轮用户复用授权由 AI 审核后可用于官网；不使用人脸推断身份、姓名或特定活动。照片未提供日期，不命名为某届成员照。邻近已有协会名称的装饰性 Logo 在实现中可使用空 alt，首页独立标志使用上表替代文本。
 
