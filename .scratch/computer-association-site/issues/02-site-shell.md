@@ -2,11 +2,13 @@
 
 **What to build:** 访客可以在手机和桌面浏览官网首页，并通过统一导航进入协会介绍、活动、成果、知识和加入页面；页面在无内容时也能给出清晰状态。
 
-**Blocked by:** 无 Issue 前置；代码阶段暂停。已合并素材足以准备外壳，不再等待 #2 全部补证。
+**Blocked by:** #33 七人 Demo 共同评审与设计定稿；正式代码阶段仍暂停。已合并素材足以制作原型，不等待 #2 全部补证。
 
 **Status:** blocked
 
 主负责人：Drb-code-ing；交叉审阅：JieE-212。统一遵守 [开发规范](../../../docs/development/team-delivery.md)。
+
+#25 组织七人原型，#26–#32 并行交付，#33 共同定稿后再形成实现基线。主负责人不单独决定最终视觉；入选作者参与设计核验，原型代码不直接合入正式网站。
 
 **GitHub Issue:** [#3](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/3)
 
