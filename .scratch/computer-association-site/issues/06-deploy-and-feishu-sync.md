@@ -2,11 +2,13 @@
 
 **What to build:** 团队可以按照仓库规范创建功能分支、提交 PR、构建和发布官网，并能把公开项目进展同步到“计算机协会”飞书文档和“协会官网开发小队”群。
 
-**Blocked by:** 05: 完成可访问性与发布前检查
+**Blocked by:** #6 可访问性与发布检查、#20 PR 检查与静态预览。
 
 **上线前置条件：** 部署平台、域名或预览入口及必要权限已经确定并验证。当前 Cloudflare 仅为候选，未创建项目，不把账号开通写为已完成。
 
 **Status:** blocked
+
+主负责人：Mannoyu；交叉审阅：hushu1232。#20 为本票原生子票，负责 CI 与预览；本票核验发布与回滚。代码阶段暂停；统一遵守 [开发规范](../../../docs/development/team-delivery.md)。
 
 **GitHub Issue:** [#7](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/7)
 

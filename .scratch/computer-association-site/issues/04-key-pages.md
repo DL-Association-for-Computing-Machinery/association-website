@@ -2,9 +2,11 @@
 
 **What to build:** 访客可以浏览协会历史活动、竞赛成果和公开知识文章，并从加入页面获得清晰的参与路径和联系入口。
 
-**Blocked by:** 02: 建立响应式官网骨架; 03: 实现公开内容筛选与构建检查
+**Blocked by:** #2、#16、#17、#18、#19。
 
 **Status:** blocked
+
+主负责人：Mannoyu；交叉审阅：Drb-code-ing。本票为页面集成验收父票，子票依次交付活动、成果、知识、协会介绍与加入；不重复实现子票。统一遵守 [开发规范](../../../docs/development/team-delivery.md)，具体任务见 [分工表](../../../docs/development/issue-assignment-plan.md)。
 
 **GitHub Issue:** [#5](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/5)
 
