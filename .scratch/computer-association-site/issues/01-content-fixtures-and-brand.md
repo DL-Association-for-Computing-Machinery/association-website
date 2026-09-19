@@ -6,6 +6,8 @@
 
 **Status:** blocked
 
+主负责人：daanlsz；交叉审阅：Guwen-yue。资料补证可继续；缺两项全国性荣誉，最终验收仍阻塞。最新执行关系以 GitHub 正文与原生依赖为准，统一遵守 [开发规范](../../../docs/development/team-delivery.md)。
+
 **GitHub Issue:** [#2](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/2)
 
 - [ ] 至少包含协会简介、近期活动、四项全国性竞赛荣誉、加入入口和一篇公开文章样例

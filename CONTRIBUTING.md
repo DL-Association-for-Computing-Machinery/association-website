@@ -7,6 +7,7 @@
 - `main`：可发布代码，只接受 Pull Request。
 - `develop`：集成分支，合并已完成且通过检查的功能。
 - `feature/<ticket>-<slug>`：功能开发分支，从 `develop` 创建。
+- `codex/<ticket>-<slug>`：Codex 执行的任务分支；应用功能同样从 `develop` 创建并合回 `develop`。
 - `release/<version>`：发布候选分支，只做修复和发布准备。
 - `hotfix/<ticket>-<slug>`：线上紧急修复，从 `main` 创建，完成后同时合并回 `main` 和 `develop`。
 
@@ -38,10 +39,10 @@ fix(content): 修复活动日期排序
 
 PR 标题沿用提交格式。提交前必须：
 
-1. 关联一个 `.scratch/computer-association-site/issues/` ticket。
+1. 关联一个 GitHub Issue，读取其最新正文与原生依赖；已有 `.scratch/computer-association-site/issues/` 快照时同步维护。
 2. 运行项目提供的最小验证命令，并在 PR 中记录结果。
 3. 检查公开内容是否经过脱敏，图片是否有来源和替代文本。
-4. 代码变更至少一名协会成员审阅；文档与协会素材按用户授权可由 AI 自审，保留来源与结论，无需另设人工内容审核人。
+4. 按 [执行团队开发规范](docs/development/team-delivery.md) 完成作者自检与执行层交叉审阅。代码 PR 由另一位执行成员审阅，可使用 AI 辅助；需求方不是固定审批关卡。文档与协会素材按用户授权可由 AI 自审，保留来源与结论。
 
 合并策略使用 squash merge，保持 `main` 和 `develop` 历史可读。
 
@@ -57,6 +58,6 @@ PR 标题沿用提交格式。提交前必须：
 
 ## 发布分工
 
-- 内容编辑者：从飞书整理候选内容并补齐来源。
-- 开发者：实现页面、内容管道和自动检查。
-- 发布负责人：确认公开范围、隐私、版权和链接后合并发布。
+- 七位执行成员承担内容整理、开发、自检、交叉审阅和发布，按 Issue 分配主负责人；人员与任务见 [执行团队开发规范](docs/development/team-delivery.md)。
+- 需求方负责需求、产品取舍和反馈，不承担默认开发任务，也不是每次合并的必经审核人。
+- 每张发布票的负责人核验内容边界、检查证据和回滚路径后执行发布。

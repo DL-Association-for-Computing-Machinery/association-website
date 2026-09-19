@@ -6,6 +6,8 @@
 
 **Status:** blocked
 
+主负责人：JieE-212；交叉审阅：Drb-code-ing。代码阶段暂停；统一遵守 [开发规范](../../../docs/development/team-delivery.md)。
+
 **GitHub Issue:** [#6](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/6)
 
 - [ ] 关键页面通过标题层级、跳过导航和可见焦点检查
