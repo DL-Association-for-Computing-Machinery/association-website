@@ -10,3 +10,5 @@ draft_*/
 pnpm-lock.yaml
 next-env.d.ts
 docs/content/assets/
+.workbuddy/
+prototype/components/threeui-source/
