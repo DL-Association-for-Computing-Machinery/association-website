@@ -1,10 +1,10 @@
 # 执行分工与依赖
 
-2026-09-19。GitHub Issue 的 Assignee、最新正文和原生依赖为执行依据。本表不表示代码已开工；本次仅完成分工与规范。统一遵守 [开发规范](team-delivery.md)。
+2026-09-22 更新。GitHub Issue 的 Assignee、最新正文和原生依赖为执行依据。Jasper #30 已确定为主站基线，Next.js 骨架已合入 `main`；本表保留原负责人，只更新已失效的设计前置。
 
 ## 官网 MVP
 
-首页新增前置：[#25 总票](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/25) 组织七人独立 Demo；[#33 共同评审](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/33) 原生依赖七份提交，#3 原生依赖 #33。按 [任务书](../product/homepage-demo-round.md) 实施，Mannoyu 协调、JieE-212 复核，全员及需求方参与评选。
+首页 Demo 阶段已收口：#30 Jasper 作为主站基线，其他方案保留为宣传站素材。#25、#26、#33 的正式评审流程不再作为主站代码前置；原型提交继续作为历史参考。
 
 | 原型票                                                                                         | 主负责人        | 提交完整性核验  |
 | ---------------------------------------------------------------------------------------------- | --------------- | --------------- |
@@ -16,21 +16,21 @@
 | [#31](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/31) | JieE-212        | Mannoyu         |
 | [#32](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/32) | Mannoyu         | daanlsz         |
 
-七张原型票无 Issue 前置且已获独立原型授权。#25 是它们及 #33 的父票，不作为反向阻塞项。正式应用实现仍按原有暂停约束执行。
+已关闭的原型票不代表全部验收完成；关闭语义以产品决策收口为准。正式应用实现已经获准，主站代码从 `main` 继续推进。
 
-| Issue                                                                                          | 可验收交付                             | 主负责人        | 交叉审阅        | 前置                       |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------- | --------------- | --------------- | -------------------------- |
-| [#2](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/2)   | 内容补证与品牌基线，仍缺两项全国性荣誉 | daanlsz         | Guwen-yue       | 无；最终验收缺证           |
-| [#3](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/3)   | 可构建外壳、样例首页与六类路由         | Drb-code-ing    | JieE-212        | #33 定稿、正式代码阶段获准 |
-| [#4](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/4)   | 公开内容到构建检查的完整路径           | hushu1232       | Jasper-Liao2026 | #3                         |
-| [#16](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/16) | 活动筛选、详情与返回                   | Guwen-yue       | JieE-212        | #4                         |
-| [#17](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/17) | 首页荣誉到成果浏览                     | daanlsz         | Drb-code-ing    | #4                         |
-| [#18](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/18) | 公开知识列表与阅读                     | Jasper-Liao2026 | hushu1232       | #4                         |
-| [#19](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/19) | 协会介绍到加入指引                     | JieE-212        | Guwen-yue       | #4                         |
-| [#20](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/20) | PR 检查与静态产物预览                  | Mannoyu         | hushu1232       | #4                         |
-| [#5](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/5)   | 页面集成及最终内容验收                 | Mannoyu         | Drb-code-ing    | #2、#16–#19                |
-| [#6](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/6)   | 全站可访问性与发布检查                 | JieE-212        | Drb-code-ing    | #5                         |
-| [#7](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/7)   | 发布、smoke test 与回滚手册            | Mannoyu         | hushu1232       | #6、#20；部署入口及权限    |
+| Issue                                                                                          | 可验收交付                             | 主负责人        | 交叉审阅        | 前置                           |
+| ---------------------------------------------------------------------------------------------- | -------------------------------------- | --------------- | --------------- | ------------------------------ |
+| [#2](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/2)   | 内容补证与品牌基线，仍缺两项全国性荣誉 | daanlsz         | Guwen-yue       | 无；最终验收缺证               |
+| [#3](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/3)   | 可构建外壳、样例首页与六类路由         | Drb-code-ing    | JieE-212        | 当前 `main` 骨架；继续补齐路由 |
+| [#4](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/4)   | 公开内容到构建检查的完整路径           | hushu1232       | Jasper-Liao2026 | #3 的页面入口与内容模型        |
+| [#16](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/16) | 活动筛选、详情与返回                   | Guwen-yue       | JieE-212        | #4                             |
+| [#17](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/17) | 首页荣誉到成果浏览                     | daanlsz         | Drb-code-ing    | #4                             |
+| [#18](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/18) | 公开知识列表与阅读                     | Jasper-Liao2026 | hushu1232       | #4                             |
+| [#19](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/19) | 协会介绍到加入指引                     | JieE-212        | Guwen-yue       | #4                             |
+| [#20](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/20) | PR 检查与静态产物预览                  | Mannoyu         | hushu1232       | #4                             |
+| [#5](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/5)   | 页面集成及最终内容验收                 | Mannoyu         | Drb-code-ing    | #2、#16–#19                    |
+| [#6](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/6)   | 全站可访问性与发布检查                 | JieE-212        | Drb-code-ing    | #5                             |
+| [#7](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/7)   | 发布、smoke test 与回滚手册            | Mannoyu         | hushu1232       | #6、#20；部署入口及权限        |
 
 #5 是 #16–#19 的父票，#7 是 #20 的父票。父票负责人协调与核验集成，不重做子票。#3 → #4 → 四个页面子票与 #20 可并行 → #5 → #6 → #7。#2 的证据缺口只阻塞最终页面验收，不再阻塞基础外壳与内容契约；保留四项要求，不静默改成两项。
 
@@ -56,4 +56,4 @@
 | [#22](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/22) | ECPC 数据、排名口径与托管决策         | Guwen-yue | daanlsz  | 无   |
 | [#23](https://github.com/DL-Association-for-Computing-Machinery/association-website/issues/23) | 五类角色权限矩阵与身份边界            | Mannoyu   | JieE-212 | 无   |
 
-现在可推进 #26–#32 独立原型、#2 补证以及 #9、#21、#22、#23 文档任务；#14 等 #9。正式应用代码票保持 blocked，不能将原型授权扩大为正式开发。仓库状态标签使用现有 `status:*`，不额外建立重复的 Skill 标签体系。
+现在可推进 #3、#4；#2 继续补证；#9、#21、#22、#23 可独立进行文档决策。#16–#20 仍等待 #4 的实际交付，#5–#7 按依赖顺序推进。#8–#14 继续作为后续学习模块阶段，不混入当前主站 MVP。仓库状态标签使用现有 `status:*`，不额外建立重复的 Skill 标签体系。
