@@ -1,5 +1,8 @@
-.scratch/InkWords/
-.scratch/load-balanced-online-oj/
+# 本地抓取、浏览器 Profile 与视觉回归产物；保留已跟踪的本地票据目录。
+.scratch/*
+!.scratch/computer-association-site/
+!.scratch/computer-association-site/**
+.workbuddy/
 .playwright-cli/
 draft_*/
 node_modules/

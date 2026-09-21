@@ -1,4 +1,2 @@
-* text=auto eol=lf
-*.png binary
-*.webp binary
-docs/content/assets/association-logo-source.svg -text
+# ThreeUI 登记源码要求逐字节保留上游内容（含上游行尾空格）。
+prototype/components/threeui-source/** whitespace=-trailing-space
