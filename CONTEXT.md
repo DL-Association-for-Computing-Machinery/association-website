@@ -17,16 +17,16 @@
 
 ## 当前约束
 
-- 用户已明确授权配置 ESLint 与 Prettier：仓库提供 pnpm 检查/格式化命令与锁文件，仅为开发工具基建，不表示已初始化网站应用。Logo 源件说明见 `docs/content/assets/README.md`。
+- 用户已明确授权配置 ESLint 与 Prettier：仓库提供 pnpm 检查/格式化命令与锁文件。主站已用 Next.js App Router、TypeScript、Tailwind CSS 和 pnpm 初始化；Logo 源件说明见 `docs/content/assets/README.md`。
 
-- 仓库已建立 Spec、MVP 与后续阶段票据、协作规范和内容/设计基建；尚未初始化网站应用。七位执行成员的主责、交叉审阅及依赖见 `docs/development/issue-assignment-plan.md`；本轮仅分配任务，不进行代码实现。
+- 仓库已建立 Spec、MVP 与后续阶段票据、协作规范和内容/设计基建；Jasper Demo 已转为主站生产骨架，其他 Demo 保留在 `demo/` 与 `prototype/`。主站基线见 `docs/product/main-site-baseline.md`。
 - 2026-09-19 用户明确授权复用协会知识库素材并由 AI 自行审核，无需另设人工内容审核人。执行规则见 `docs/content/public-content-governance.md`。
 - 首版优先解决宣传与内容发布，不先做复杂后台、账号体系或实时数据同步。
 - 需求表同时提出 OJ 平台、ECPC 榜单和五类用户角色；这些能力需要独立阶段设计，不能在静态官网 MVP 中假设已经存在。
-- 首页先走七人独立原型与共同评审：#25 总票，#26–#32 个人 Demo，#33 定稿并阻塞 #3。成员可进行独立原型；本轮代理只安排流程，正式应用/CI/部署仍暂停。旧“校园技术成果展”降为候选，不是已定视觉方向。规则见 `docs/product/homepage-demo-round.md`。
+- 首页采用 Jasper Demo 的视觉与交互基线；其他方案继续作为开发组宣传站素材。旧“校园技术成果展”降为候选，不是已定视觉方向。原型规则见 `docs/product/homepage-demo-round.md`。
 
 ## 首版产品判断
 
 官网采用内容驱动的静态站点：内容源通过一次性导出或受控同步进入仓库，构建后发布。飞书 API 作为后续自动化入口保留，不在首版引入运行时依赖。
 
-设计先读 `PRODUCT.md` 与 `docs/product/design-brief.md`；素材先读 `docs/content/launch-content-pack.md`。本轮仅完成无代码基建；实现、CI 和上线仍未执行。技术基线沿用 Next.js、TypeScript、Tailwind CSS、Markdown/MDX 和 pnpm。
+设计先读 `PRODUCT.md` 与 `docs/product/design-brief.md`；素材先读 `docs/content/launch-content-pack.md`。当前已完成主站首页骨架，CI、部署、内页和内容模型接入仍待后续阶段。技术基线为 Next.js、TypeScript、Tailwind CSS、Markdown/MDX 和 pnpm。

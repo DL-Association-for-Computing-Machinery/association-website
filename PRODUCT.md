@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-沿用已确认的 GeekPie 主站参考：Next.js、React、TypeScript、App Router、Tailwind CSS、pnpm、仓库内 Markdown/MDX 与静态发布。用户授权由 AI 完成具体方案选择；当前只完成内容与设计基建，未初始化应用。Cloudflare 是候选部署平台，尚未开通项目或绑定域名。
+沿用已确认的 GeekPie 主站参考：Next.js、React、TypeScript、App Router、Tailwind CSS、pnpm、仓库内 Markdown/MDX 与静态发布。Jasper Demo 已转为主站首页基线并完成首版骨架；Cloudflare 是候选部署平台，尚未开通项目或绑定域名。
 
 ## Users
 
@@ -34,7 +34,7 @@ web
 
 使用知识库“计协LOGO”中的正式图形，保留原比例与颜色。名称使用“东华理工大学计算机协会”；全称可使用“东华理工大学学生计算机协会”。语气具体、友好，使用真实活动与学习内容建立信任。
 
-首页视觉由七位执行成员独立 Demo 后共同评选，见 [任务书](docs/product/homepage-demo-round.md)；现有深蓝“校园技术成果展”仅是候选，不是强制风格。#33 形成共同决策后回写设计基线，再推进 #3。
+首页视觉采用 Jasper Demo 的视觉与交互基线；其他成员方案保留在仓库中，后续分别发展为开发组宣传站。现有深蓝“校园技术成果展”仅是候选，不是强制风格。
 
 ## Evidence on Hand
 
