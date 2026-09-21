@@ -2,11 +2,12 @@
 
 协会官网项目的需求、研究记录和实现代码。
 
-截至 2026-09-19，本仓库已完成无代码内容与设计基建，尚未初始化应用、CI 或部署。GitHub #2 的四项全国性成绩尚缺两项证据，保持未完成；#3–#7 按依赖等待实现。无需另设人工素材审核人。
+截至 2026-09-21，Jasper 首页 Demo 已作为主站视觉与交互基线合并到 `main`，其他成员 Demo 继续保留为宣传网站素材；生产应用、CI 与部署仍待后续新 issue 推进。四项全国性成绩尚缺两项证据，继续按内容治理规则处理。无需另设人工素材审核人。
 
 ## 当前文档
 
 - [产品事实与范围](PRODUCT.md)
+- [主站基线与宣传站点规划](docs/product/main-site-baseline.md)
 - [无代码设计简报与视觉令牌](docs/product/design-brief.md)
 - [首批素材、公开文案与 AI 自审记录](docs/content/launch-content-pack.md)
 - [官网 Spec](.scratch/computer-association-site/spec.md)

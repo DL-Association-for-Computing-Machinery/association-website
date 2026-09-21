@@ -19,14 +19,14 @@
 
 - 用户已明确授权配置 ESLint 与 Prettier：仓库提供 pnpm 检查/格式化命令与锁文件，仅为开发工具基建，不表示已初始化网站应用。Logo 源件说明见 `docs/content/assets/README.md`。
 
-- 仓库已建立 Spec、MVP 与后续阶段票据、协作规范和内容/设计基建；尚未初始化网站应用。七位执行成员的主责、交叉审阅及依赖见 `docs/development/issue-assignment-plan.md`；本轮仅分配任务，不进行代码实现。
+- 仓库已建立 Spec、MVP 与后续阶段票据、协作规范和内容/设计基建；Jasper 的首页 Demo 已合并并作为主站视觉与交互基线，正式应用仍需从该基线重新实现。七位执行成员的其他 Demo 保留为宣传网站素材，主站实现按 `docs/product/main-site-baseline.md` 推进。
 - 2026-09-19 用户明确授权复用协会知识库素材并由 AI 自行审核，无需另设人工内容审核人。执行规则见 `docs/content/public-content-governance.md`。
 - 首版优先解决宣传与内容发布，不先做复杂后台、账号体系或实时数据同步。
 - 需求表同时提出 OJ 平台、ECPC 榜单和五类用户角色；这些能力需要独立阶段设计，不能在静态官网 MVP 中假设已经存在。
-- 首页先走七人独立原型与共同评审：#25 总票，#26–#32 个人 Demo，#33 定稿并阻塞 #3。成员可进行独立原型；本轮代理只安排流程，正式应用/CI/部署仍暂停。旧“校园技术成果展”降为候选，不是已定视觉方向。规则见 `docs/product/homepage-demo-round.md`。
+- 首页已完成独立 Demo 阶段的收口：Jasper #30 作为主站基线，其他方案保留为开发小组宣传网站；历史 issue 已统一归档，后续实现使用新的开发 issue 和 PR。旧“校园技术成果展”降为候选，不是已定视觉方向。规划见 `docs/product/main-site-baseline.md`。
 
 ## 首版产品判断
 
 官网采用内容驱动的静态站点：内容源通过一次性导出或受控同步进入仓库，构建后发布。飞书 API 作为后续自动化入口保留，不在首版引入运行时依赖。
 
-设计先读 `PRODUCT.md` 与 `docs/product/design-brief.md`；素材先读 `docs/content/launch-content-pack.md`。本轮仅完成无代码基建；实现、CI 和上线仍未执行。技术基线沿用 Next.js、TypeScript、Tailwind CSS、Markdown/MDX 和 pnpm。
+设计先读 `PRODUCT.md` 与 `docs/product/design-brief.md`；素材先读 `docs/content/launch-content-pack.md`。当前主站仍未初始化生产应用、CI 或上线流程。技术基线沿用 Next.js、TypeScript、Tailwind CSS、Markdown/MDX 和 pnpm。
