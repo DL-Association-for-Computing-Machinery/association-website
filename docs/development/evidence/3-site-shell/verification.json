@@ -514,5 +514,11 @@
     "加入我们": 2,
     "知识与文章": 1
   },
-  "carouselFrames": 1
+  "carouselFrames": 1,
+  "threeD": {
+    "iconCloudShadowChildren": 3,
+    "velocityItems": 64,
+    "joinGridShadow": true,
+    "carouselReady": true
+  }
 }
