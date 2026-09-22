@@ -143,23 +143,53 @@ export const HOME_AWARDS: readonly AwardEntry[] = [
 ];
 
 /**
- * 首页「我们赢得」区块**实际展示**的条目：只有 2 条，与首页基线逐条一致。
+ * 首页预览的候选条目，按**由强到弱**排列。
+ *
+ * 用显式 id 而不是下标切片或按 `rank` 排序：以后调整 `HOME_AWARDS` 的顺序、
+ * 或补录新成绩时，首页展示哪几条不会被悄悄改掉 —— 要换条目必须改这张表。
+ * 第 3、4 位只是候选占位，最终的四项荣誉由 #2 与 #5 验收确定。
+ */
+const HOME_AWARDS_PREVIEW_RANKING: readonly string[] = [
+  "achievement-ccpc-2025",
+  "achievement-lanqiao-15",
+  "achievement-tianti-2024",
+  "achievement-icpc-invite-2024",
+];
+
+/** 预览条数的合法上限。#3 的验收原文是「预览支持 0–4 条」。 */
+export const HOME_AWARDS_PREVIEW_MAX = 4;
+
+/**
+ * 首页预览实际展示几条。改这一个值即可在 0–4 之间切换，越界会被钳回合法区间，
+ * 因此「0 条」也是被支持的正常状态，不是需要临时绕开的边界。
+ */
+export const HOME_AWARDS_PREVIEW_LIMIT = 2;
+
+function clampPreviewLimit(limit: number): number {
+  if (!Number.isFinite(limit)) {
+    return 0;
+  }
+
+  return Math.min(Math.max(Math.trunc(limit), 0), HOME_AWARDS_PREVIEW_MAX);
+}
+
+/**
+ * 首页「我们赢得」区块**实际展示**的条目，与首页基线逐条一致：只有 2 条。
  *
  * 基线把这里当摘要位，只列最强的两条国家级成绩，完整清单留给成果页；
  * #3 的验收原文也是「首页展示……已核验荣誉摘要（预览支持 0–4 条）」。
- * 用显式 id 而不是下标切片，避免以后调整 `HOME_AWARDS` 顺序时悄悄改变首页内容。
- * 筛选保持「弱 → 强」的源码顺序，`<dia-animated-list>` prepend 之后
- * 「2025 CCPC」落在最上方，与基线的视觉顺序一致。
- * 完整 10 条留在 `HOME_AWARDS`，供成果页（#5）使用。
+ *
+ * 取候选表前 N 条（强 → 弱），再**反转回 `HOME_AWARDS` 的弱 → 强顺序**：
+ * `<dia-animated-list>` 会逐条 prepend，反转之后最强的才落在最上方，
+ * 与基线的视觉顺序一致。完整 10 条留在 `HOME_AWARDS`，供成果页（#5）使用。
  */
-const HOME_AWARDS_PREVIEW_IDS: readonly string[] = [
-  "achievement-lanqiao-15",
-  "achievement-ccpc-2025",
-];
-
-export const HOME_AWARDS_PREVIEW: readonly AwardEntry[] = HOME_AWARDS.filter((award) =>
-  HOME_AWARDS_PREVIEW_IDS.includes(award.id),
-);
+export const HOME_AWARDS_PREVIEW: readonly AwardEntry[] = HOME_AWARDS_PREVIEW_RANKING.slice(
+  0,
+  clampPreviewLimit(HOME_AWARDS_PREVIEW_LIMIT),
+)
+  .reverse()
+  .map((id) => HOME_AWARDS.find((award) => award.id === id))
+  .filter((award): award is AwardEntry => award !== undefined);
 
 export interface BentoCard {
   readonly icon: string;

@@ -16,7 +16,9 @@ import { HomeStack } from "@/components/home/home-stack";
  *
  * 相对基线只动了两处，都为了「多页站点」这个既有前提：
  * 卡片与资源的链接指向真实路由（基线里全是本页锚点或 `#`），
- * 荣誉条目取内容包口径的十条（基线原型只放了两条示例）。
+ * 荣誉条目换成内容包登记表里已核验的成绩（基线原型只放了两条示例）。
+ * 首页是摘要位，展示条数由 `HOME_AWARDS_PREVIEW_LIMIT` 控制在 0–4 条之内，
+ * 完整清单留给成果页，不在这里铺开。
  */
 export default function HomePage() {
   return (
