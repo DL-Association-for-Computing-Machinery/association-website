@@ -142,6 +142,25 @@ export const HOME_AWARDS: readonly AwardEntry[] = [
   },
 ];
 
+/**
+ * 首页「我们赢得」区块**实际展示**的条目：只有 2 条，与首页基线逐条一致。
+ *
+ * 基线把这里当摘要位，只列最强的两条国家级成绩，完整清单留给成果页；
+ * #3 的验收原文也是「首页展示……已核验荣誉摘要（预览支持 0–4 条）」。
+ * 用显式 id 而不是下标切片，避免以后调整 `HOME_AWARDS` 顺序时悄悄改变首页内容。
+ * 筛选保持「弱 → 强」的源码顺序，`<dia-animated-list>` prepend 之后
+ * 「2025 CCPC」落在最上方，与基线的视觉顺序一致。
+ * 完整 10 条留在 `HOME_AWARDS`，供成果页（#5）使用。
+ */
+const HOME_AWARDS_PREVIEW_IDS: readonly string[] = [
+  "achievement-lanqiao-15",
+  "achievement-ccpc-2025",
+];
+
+export const HOME_AWARDS_PREVIEW: readonly AwardEntry[] = HOME_AWARDS.filter((award) =>
+  HOME_AWARDS_PREVIEW_IDS.includes(award.id),
+);
+
 export interface BentoCard {
   readonly icon: string;
   readonly title: string;
