@@ -1,0 +1,583 @@
+{
+  "routes": [
+    {
+      "viewport": "desktop",
+      "route": "/",
+      "status": 200,
+      "hasMain": true,
+      "h1": "ComputerAssociation",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": false,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/about",
+      "status": 200,
+      "hasMain": true,
+      "h1": "协会介绍",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/activities",
+      "status": 200,
+      "hasMain": true,
+      "h1": "活动",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/honors",
+      "status": 200,
+      "hasMain": true,
+      "h1": "成果",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/knowledge",
+      "status": 200,
+      "hasMain": true,
+      "h1": "知识与文章",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/join",
+      "status": 200,
+      "hasMain": true,
+      "h1": "加入我们",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "desktop",
+      "route": "/no-such-page",
+      "status": 404,
+      "hasMain": true,
+      "h1": "没有这个页面",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/",
+      "status": 200,
+      "hasMain": true,
+      "h1": "ComputerAssociation",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": false,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/about",
+      "status": 200,
+      "hasMain": true,
+      "h1": "协会介绍",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/activities",
+      "status": 200,
+      "hasMain": true,
+      "h1": "活动",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/honors",
+      "status": 200,
+      "hasMain": true,
+      "h1": "成果",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/knowledge",
+      "status": 200,
+      "hasMain": true,
+      "h1": "知识与文章",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/join",
+      "status": 200,
+      "hasMain": true,
+      "h1": "加入我们",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    },
+    {
+      "viewport": "mobile",
+      "route": "/no-such-page",
+      "status": 404,
+      "hasMain": true,
+      "h1": "没有这个页面",
+      "introVisible": false,
+      "introBlocksPointer": false,
+      "dockItems": 6,
+      "footerLinks": 6,
+      "emptyState": true,
+      "noJs": false,
+      "dockUpgraded": true
+    }
+  ],
+  "overflow": [],
+  "console": [
+    {
+      "slug": "desktop-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "desktop-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "desktop-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "desktop-not-found",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "slug": "mobile-not-found",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "slug": "keyboard-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "keyboard-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "keyboard-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "keyboard-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    }
+  ],
+  "focus": {
+    "home": [
+      {
+        "tag": "button",
+        "className": "file-tree__row",
+        "text": "README.md",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "character-carousel-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "dia-icon-cloud",
+        "className": "stack-cloud",
+        "text": "CC++JavaPythonGitGitHubL",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "interactive-resource-button",
+        "text": "更多资源更多资源→",
+        "href": "/knowledge",
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": true,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "text-path-study-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "iframe",
+        "className": "text-path-study-frame",
+        "text": "",
+        "href": null,
+        "ariaCurrent": null,
+        "outline": "none 3px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "bento-card__cta",
+        "text": "查看 →",
+        "href": "/#learning",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "bento-card__cta",
+        "text": "查看 →",
+        "href": "/#activities",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "bento-card__cta",
+        "text": "查看 →",
+        "href": "/#join",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "",
+        "text": "首页",
+        "href": "/",
+        "ariaCurrent": "page",
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "",
+        "text": "协会介绍",
+        "href": "/about",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "",
+        "text": "活动",
+        "href": "/activities",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      },
+      {
+        "tag": "a",
+        "className": "",
+        "text": "成果",
+        "href": "/honors",
+        "ariaCurrent": null,
+        "outline": "solid 2px",
+        "boxShadow": false,
+        "visible": true
+      }
+    ],
+    "homeSection": [
+      {
+        "section": "about",
+        "ariaCurrent": null
+      },
+      {
+        "section": "honors",
+        "ariaCurrent": "location"
+      },
+      {
+        "section": "activities",
+        "ariaCurrent": null
+      },
+      {
+        "section": "learning",
+        "ariaCurrent": null
+      },
+      {
+        "section": "join",
+        "ariaCurrent": null
+      }
+    ],
+    "aboutPage": [
+      {
+        "section": "about",
+        "ariaCurrent": "page"
+      },
+      {
+        "section": "honors",
+        "ariaCurrent": null
+      },
+      {
+        "section": "activities",
+        "ariaCurrent": null
+      },
+      {
+        "section": "learning",
+        "ariaCurrent": null
+      },
+      {
+        "section": "join",
+        "ariaCurrent": null
+      }
+    ],
+    "darkClassAfterIntro": "theme-dark",
+    "darkOnFirstFrame": true
+  },
+  "errors": [],
+  "accessibleNames": {
+    "探索计协": 1,
+    "竞赛荣誉": 1,
+    "活动回顾": 1,
+    "学习方向": 1,
+    "加入我们": 2,
+    "知识与文章": 1
+  },
+  "carouselFrames": 1,
+  "threeD": {
+    "iconCloudShadowChildren": 3,
+    "velocityItems": 64,
+    "joinGridShadow": true,
+    "carouselReady": true
+  },
+  "homeSections": {
+    "about": {
+      "present": true,
+      "visible": true,
+      "size": "1440×1190",
+      "heading": "这是我们",
+      "bodyTextLength": 79,
+      "paragraphs": 1,
+      "leadLength": 79
+    },
+    "activities": {
+      "present": true,
+      "visible": true,
+      "size": "1216×672",
+      "heading": null,
+      "bodyTextLength": 0,
+      "carouselFrames": 1,
+      "galleryImages": 3
+    },
+    "honors": {
+      "present": true,
+      "visible": true,
+      "size": "1440×833",
+      "heading": "我们赢得",
+      "bodyTextLength": 65,
+      "awardItems": 2,
+      "globeFrames": 1,
+      "emptyState": null
+    },
+    "learning": {
+      "present": true,
+      "visible": true,
+      "size": "1440×1146",
+      "heading": "我们使用",
+      "bodyTextLength": 429,
+      "cloudListItems": 16,
+      "cloudShadowChildren": 3,
+      "velocityItems": 64
+    },
+    "join": {
+      "present": true,
+      "visible": true,
+      "size": "1440×512",
+      "heading": "加入我们展现你奔腾不息的力量",
+      "bodyTextLength": 0,
+      "titleLines": 2,
+      "gridShadowChildren": 2
+    }
+  }
+}
