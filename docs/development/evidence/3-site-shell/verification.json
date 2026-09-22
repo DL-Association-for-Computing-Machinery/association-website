@@ -205,6 +205,16 @@
       "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
     },
     {
+      "slug": "desktop-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
+      "slug": "desktop-home",
+      "type": "warning",
+      "text": "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing."
+    },
+    {
       "slug": "desktop-not-found",
       "type": "error",
       "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
@@ -520,5 +530,54 @@
     "velocityItems": 64,
     "joinGridShadow": true,
     "carouselReady": true
+  },
+  "homeSections": {
+    "about": {
+      "present": true,
+      "visible": true,
+      "size": "1440×1190",
+      "heading": "这是我们",
+      "bodyTextLength": 79,
+      "paragraphs": 1,
+      "leadLength": 79
+    },
+    "activities": {
+      "present": true,
+      "visible": true,
+      "size": "1216×672",
+      "heading": null,
+      "bodyTextLength": 0,
+      "carouselFrames": 1,
+      "galleryImages": 3
+    },
+    "honors": {
+      "present": true,
+      "visible": true,
+      "size": "1440×833",
+      "heading": "我们赢得",
+      "bodyTextLength": 65,
+      "awardItems": 2,
+      "globeFrames": 1,
+      "emptyState": null
+    },
+    "learning": {
+      "present": true,
+      "visible": true,
+      "size": "1440×1146",
+      "heading": "我们使用",
+      "bodyTextLength": 429,
+      "cloudListItems": 16,
+      "cloudShadowChildren": 3,
+      "velocityItems": 64
+    },
+    "join": {
+      "present": true,
+      "visible": true,
+      "size": "1440×512",
+      "heading": "加入我们展现你奔腾不息的力量",
+      "bodyTextLength": 0,
+      "titleLines": 2,
+      "gridShadowChildren": 2
+    }
   }
 }

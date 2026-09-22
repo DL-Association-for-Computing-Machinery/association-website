@@ -1,0 +1,224 @@
+{
+  "sweep": [
+    {
+      "width": 1920,
+      "overflow": 0,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "stageColumns": "1920px",
+      "offenders": []
+    },
+    {
+      "width": 1680,
+      "overflow": 0,
+      "scrollWidth": 1680,
+      "clientWidth": 1680,
+      "stageColumns": "1680px",
+      "offenders": []
+    },
+    {
+      "width": 1440,
+      "overflow": 0,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "stageColumns": "1440px",
+      "offenders": []
+    },
+    {
+      "width": 1366,
+      "overflow": 0,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "stageColumns": "1366px",
+      "offenders": []
+    },
+    {
+      "width": 1280,
+      "overflow": 0,
+      "scrollWidth": 1280,
+      "clientWidth": 1280,
+      "stageColumns": "1280px",
+      "offenders": []
+    },
+    {
+      "width": 1200,
+      "overflow": 0,
+      "scrollWidth": 1200,
+      "clientWidth": 1200,
+      "stageColumns": "1200px",
+      "offenders": []
+    },
+    {
+      "width": 1180,
+      "overflow": 0,
+      "scrollWidth": 1180,
+      "clientWidth": 1180,
+      "stageColumns": "1180px",
+      "offenders": []
+    },
+    {
+      "width": 1080,
+      "overflow": 0,
+      "scrollWidth": 1080,
+      "clientWidth": 1080,
+      "stageColumns": "1080px",
+      "offenders": []
+    },
+    {
+      "width": 1024,
+      "overflow": 0,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "stageColumns": "1024px",
+      "offenders": []
+    },
+    {
+      "width": 900,
+      "overflow": 0,
+      "scrollWidth": 900,
+      "clientWidth": 900,
+      "stageColumns": "900px",
+      "offenders": [
+        {
+          "tag": "div",
+          "className": "awards-globe",
+          "left": -12,
+          "right": 350,
+          "width": 362
+        },
+        {
+          "tag": "threeui-globe-study",
+          "className": "text-path-study",
+          "left": -12,
+          "right": 350,
+          "width": 362
+        }
+      ]
+    },
+    {
+      "width": 820,
+      "overflow": 0,
+      "scrollWidth": 820,
+      "clientWidth": 820,
+      "stageColumns": "820px",
+      "offenders": [
+        {
+          "tag": "div",
+          "className": "awards-globe",
+          "left": -12,
+          "right": 270,
+          "width": 282
+        },
+        {
+          "tag": "threeui-globe-study",
+          "className": "text-path-study",
+          "left": -12,
+          "right": 270,
+          "width": 282
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "overflow": 0,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "stageColumns": "768px",
+      "offenders": []
+    },
+    {
+      "width": 700,
+      "overflow": 0,
+      "scrollWidth": 700,
+      "clientWidth": 700,
+      "stageColumns": "700px",
+      "offenders": []
+    },
+    {
+      "width": 640,
+      "overflow": 0,
+      "scrollWidth": 640,
+      "clientWidth": 640,
+      "stageColumns": "640px",
+      "offenders": []
+    },
+    {
+      "width": 430,
+      "overflow": 0,
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "stageColumns": "430px",
+      "offenders": []
+    },
+    {
+      "width": 360,
+      "overflow": 0,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "stageColumns": "360px",
+      "offenders": []
+    }
+  ],
+  "breakpoint": {
+    "narrow": {
+      "dia-icon-cloud": {
+        "ok": false,
+        "canvasWidth": 300,
+        "mobileStatic": "true"
+      },
+      "dia-logo-particles": {
+        "ok": false,
+        "canvasCount": 0,
+        "markCount": 1,
+        "mobileStatic": "true"
+      },
+      "dia-retro-grid": {
+        "ok": false,
+        "canvasWidth": 300,
+        "hostWidth": 700,
+        "mobileStatic": "true"
+      },
+      "threeui-character-carousel": {
+        "ok": false,
+        "frames": 0,
+        "mobileStatic": "true"
+      },
+      "threeui-globe-study": {
+        "ok": false,
+        "frames": 0,
+        "mobileStatic": "true"
+      }
+    },
+    "wide": {
+      "dia-icon-cloud": {
+        "ok": true,
+        "canvasWidth": 440,
+        "mobileStatic": null
+      },
+      "dia-logo-particles": {
+        "ok": true,
+        "canvasCount": 1,
+        "markCount": 1,
+        "mobileStatic": null
+      },
+      "dia-retro-grid": {
+        "ok": true,
+        "canvasWidth": 1600,
+        "hostWidth": 1600,
+        "mobileStatic": null
+      },
+      "threeui-character-carousel": {
+        "ok": true,
+        "frames": 1,
+        "mobileStatic": null
+      },
+      "threeui-globe-study": {
+        "ok": true,
+        "frames": 1,
+        "mobileStatic": null
+      }
+    }
+  },
+  "console": [],
+  "errors": []
+}
