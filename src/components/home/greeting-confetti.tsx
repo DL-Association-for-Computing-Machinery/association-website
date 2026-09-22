@@ -40,7 +40,10 @@ export function GreetingConfetti() {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const mobileLite = window.matchMedia("(max-width: 48rem)");
 
-    if (reduceMotion.matches || mobileLite.matches) {
+    // 「减少动效」是用户偏好，直接不启用，与基线一致。
+    // 窄屏的判定不放在这里：一次性算掉的话，「窄屏打开 → 拉宽」之后这个
+    // 问候区再也不会撒彩纸。判定落在每次真正要撒之前，见下面的 IntersectionObserver。
+    if (reduceMotion.matches) {
       return;
     }
 
@@ -103,6 +106,11 @@ export function GreetingConfetti() {
         return;
       }
 
+      // 放行之后又把窗口缩回窄屏就跳过：彩纸在窄屏没有承载它的排版。
+      if (mobileLite.matches) {
+        return;
+      }
+
       resize();
 
       const width = greetingRegion.clientWidth;
@@ -141,7 +149,9 @@ export function GreetingConfetti() {
     window.addEventListener("resize", resize, { passive: true });
 
     if (typeof IntersectionObserver !== "function") {
-      fireWhenReady();
+      if (!mobileLite.matches) {
+        fireWhenReady();
+      }
 
       return () => {
         window.removeEventListener("resize", resize);
@@ -154,10 +164,19 @@ export function GreetingConfetti() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          observer.disconnect();
-          fireWhenReady();
+        if (!entries.some((entry) => entry.isIntersecting)) {
+          return;
         }
+
+        // 窄屏不撒彩纸：这个问候区在窄屏是静态排版，没有承载动画的位置。
+        // 这里刻意不 disconnect —— 视口拉宽之后还要能撒一次，否则
+        // 「窄屏打开 → 拉宽」就再也看不到彩纸（与 dia-icon-cloud 那批同一个坑）。
+        if (mobileLite.matches) {
+          return;
+        }
+
+        observer.disconnect();
+        fireWhenReady();
       },
       { threshold: 0.35 },
     );
