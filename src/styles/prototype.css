@@ -1414,10 +1414,15 @@ dia-icon-cloud > .cloud-list > li {
   transform: translateX(0);
 }
 
-/* 立体标签云下方的滚动速度文字带：两行反向流动，内容由同一份技术栈列表生成。 */
+/* 立体标签云下方的滚动速度文字带：两行反向流动，内容由同一份技术栈列表生成。
+   宽度取父级内容盒而不是 100vw：所属的 .stack 有 1.25rem 左右内边距，
+   `min(100vw, 72rem)` 不含这段内边距，于是带子比内容盒宽 40px，把 .page-content
+   的 grid 列顶到视口之外（1080 / 1024 / 900 视口实测横向溢出 40px）。
+   带宽屏下的取值不变（父内容盒 ≥ 72rem 时仍是 1152px）。
+   基线原型页同样溢出，这是主站侧对基线的第一处有意修正。 */
 .stack-velocity {
   display: grid;
-  width: min(100vw, 72rem);
+  width: min(100%, 72rem);
   gap: 0.65rem;
   margin-top: clamp(1.75rem, 5vw, 3.5rem);
   margin-bottom: clamp(2.5rem, 7vw, 5rem);
