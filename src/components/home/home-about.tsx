@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element -- 这两处图片是基线样式直接控制的静态装饰图
    （窄屏相册靠 `aspect-ratio` + `object-fit` 裁切），换成 next/image 会带上内联尺寸与
    srcset，破坏与基线的视觉一致；它们也不是 LCP 元素，不需要按需优化。 */
+import Link from "next/link";
+import { HOME_ABOUT_PAGE_LINK } from "@/lib/about-join-content";
 import { HOME_ABOUT_LEAD } from "@/lib/home-content";
+import { findPageById } from "@/lib/site-navigation";
 
 const GROUP_PHOTO_SRC = "/prototype/assets/association-group.webp";
 const CONTEST_PHOTO_SRC = "/prototype/assets/photo-contest-group.webp";
@@ -14,8 +17,12 @@ const CCPC_PHOTO_SRC = "/prototype/assets/photo-ccpc-zhengzhou.webp";
  * - 桌面用 `<threeui-character-carousel variant="filmstrip">` 的活动与成员影像轨道；
  * - 窄屏用静态三图相册（组件在轻量模式不创建 iframe，这里给等价的静态回落）。
  * 该展示区带 `id="activities"`，因为顶栏「活动回顾」指向它，与基线一致。
+ *
+ * 「阅读完整介绍」指向 /about，补齐首页到介绍页的闭环；不改 Dock 锚点。
  */
 export function HomeAbout() {
+  const aboutPage = findPageById("about");
+
   return (
     <section className="about" id="about" aria-labelledby="about-title">
       <h2 className="about-title" id="about-title">
@@ -26,6 +33,9 @@ export function HomeAbout() {
         <dia-blur-fade in-view="" delay="0.05">
           <p className="about-lead">{HOME_ABOUT_LEAD}</p>
         </dia-blur-fade>
+        <Link className="home-inline-link" href={aboutPage.href}>
+          {HOME_ABOUT_PAGE_LINK}
+        </Link>
       </div>
 
       <div

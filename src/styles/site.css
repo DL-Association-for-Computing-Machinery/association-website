@@ -1,10 +1,11 @@
 /* 主站在首页基线之外新增的样式。
  *
- * 只放四类东西，其余一律改动 styles/prototype.css：
+ * 只放下列几类东西，其余一律改动 styles/prototype.css：
  * 1. 无脚本与「本轮跳过开屏」的降级；
  * 2. 六类路由带来的内页结构与空状态；
  * 3. 顶栏 Dock 与页脚导航的「当前页」状态（基线的 [aria-current="location"] 只管首页区块）；
- * 4. 首页区块在基线没有覆盖到的状态，例如荣誉摘要条数为 0 时的占位。
+ * 4. 首页区块在基线没有覆盖到的状态，例如荣誉摘要条数为 0 时的占位；
+ * 5. 协会介绍与加入页正文，以及首页到这两页的轻量互链。
  */
 
 /* --------------------------------------------------------------------------
@@ -167,4 +168,209 @@ html.no-js.intro-active body {
   border-bottom-color: var(--brand-cyan);
   color: var(--closing-strong);
   font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   #19 协会介绍 / 加入页正文，以及首页到内页的轻量互链
+   -------------------------------------------------------------------------- */
+
+.route-stack {
+  display: grid;
+  gap: clamp(2rem, 5vh, 3.5rem);
+  margin-top: clamp(2rem, 5vh, 3.5rem);
+}
+
+.route-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.route-section__title {
+  margin: 0;
+  color: var(--heading);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.route-section .empty-state {
+  margin-top: 0;
+}
+
+.about-media {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 1.15rem 1.35rem;
+  align-items: center;
+}
+
+.about-media__logo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-media);
+  background: var(--surface);
+}
+
+.about-media__photo-frame {
+  position: relative;
+  min-height: 16rem;
+  overflow: hidden;
+  border-radius: var(--radius-media);
+  background: var(--surface);
+}
+
+.about-media__photo {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.about-copy {
+  display: grid;
+  gap: 1rem;
+  max-width: 46rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.about-copy p {
+  margin: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-card {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+  min-height: 100%;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: var(--radius-media);
+  background: color-mix(in srgb, var(--surface) 76%, transparent);
+}
+
+.info-card__title {
+  margin: 0;
+  color: var(--heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.info-card__body {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.info-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin: 0.15rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-card__links a,
+.page-cta a,
+.home-inline-link {
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid currentColor;
+  color: var(--link);
+}
+
+.info-card__links a:hover,
+.page-cta a:hover,
+.home-inline-link:hover {
+  color: var(--link-hover);
+}
+
+.timeline {
+  display: grid;
+  gap: 1.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline__item {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--brand-cyan);
+}
+
+.timeline__date {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.timeline__title {
+  margin: 0;
+  color: var(--heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.timeline__summary {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.contact-panel {
+  max-width: 46rem;
+  margin: 0;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+  border-radius: var(--radius-media);
+  background: color-mix(in srgb, var(--surface) 76%, transparent);
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.page-cta {
+  margin: 0;
+}
+
+.home-inline-link {
+  justify-self: center;
+  width: fit-content;
+}
+
+.home-inline-link--on-join {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.15rem;
+}
+
+@media (max-width: 48rem) {
+  .about-media,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-media__logo {
+    width: min(7.5rem, 36vw);
+    justify-self: start;
+  }
+
+  .about-media__photo-frame {
+    min-height: 12.5rem;
+  }
 }
