@@ -92,6 +92,14 @@ body {
 html {
   background-color: var(--page);
   scroll-behavior: smooth;
+  /* 隐藏浏览器原生滚动条：页面依然可以正常滚动，只是不绘制滚动条本身。
+     Firefox 认 scrollbar-width，WebKit/Blink 认 ::-webkit-scrollbar。 */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 html.intro-active,
@@ -2498,8 +2506,7 @@ dia-logo-particles.is-settled .dia-logo-particles__particle {
   .greeting-confetti,
   .stack-velocity,
   .bento-marquee,
-  .bento-globe,
-  .page-shine {
+  .bento-globe {
     display: none;
   }
 
@@ -2575,191 +2582,13 @@ dia-logo-particles.is-settled .dia-logo-particles__particle {
   html[data-theme-transition="active"]::view-transition-new(root) {
     animation-duration: 0.01ms !important;
   }
-}
 
-/* --------------------------------------------------------------------------
-   整页流动彩框（<dia-terminal> shine 的全视口版）
-   -------------------------------------------------------------------------- */
-
-@property --frame-shine-progress {
-  syntax: "<number>";
-  inherits: true;
-  initial-value: 0;
-}
-
-/* 做法与终端彩边同源：一条 300% 见方的品牌彩虹渐变带钉在视口上平移，
-   双层 mask 做异或后只剩 padding 那一圈 —— 浏览器视口的四条边各一条流动彩边。
-   外沿方角、贴满视口四角（没有空白缺口）；转角的圆角做在内沿（圆角填角），
-    由四个补角小片 <i> 画出：小片与环体共享同一条视口级渐变坐标和进度，
-    再用径向渐变 mask 只露出「内角弧线以外」的那块。
-   整个装饰包在 @supports 里：拿不到 mask-composite 的老浏览器挖不出边环，
-   会变成一整屏渐变糊在页面上，宁可不做；壳本身不设任何样式，层缺了就无副作用。 */
-@supports ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
-  .page-shine {
-    position: fixed;
-    inset: 0;
-    /* 高于顶栏（50）与跳转链接（60）、低于主题圆形扩散（99/100）：
-       彩框贴在「屏幕」上，页面内容都从它下面过 */
-    z-index: 80;
-    pointer-events: none;
-    --frame-shine-progress: 0;
-    animation: page-shine-progress var(--frame-shine-duration, 9s) linear infinite;
+  /* 减少动效偏好下直接隐藏开屏，不做描边与开合动画 */
+  .intro-screen {
+    visibility: hidden;
   }
 
-  /* 环体：与 <dia-terminal> 的 .shine 同一条品牌彩虹（一轮半，任何相位至少三色） */
-  .page-shine::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: var(--frame-shine-width, 5px);
-    background-image: linear-gradient(
-      115deg,
-      var(--brand-cyan, #38b7d1) 0%,
-      var(--brand-blue, #2f7fd0) 11%,
-      var(--brand-gold, #f4c64f) 22%,
-      var(--brand-coral, #dc554c) 33%,
-      var(--brand-orange, #ff7a38) 44%,
-      var(--brand-cyan, #38b7d1) 55%,
-      var(--brand-blue, #2f7fd0) 66%,
-      var(--brand-gold, #f4c64f) 77%,
-      var(--brand-coral, #dc554c) 88%,
-      var(--brand-orange, #ff7a38) 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 300vw 300vh;
-    background-attachment: fixed;
-    background-position: calc(-200vw * var(--frame-shine-progress))
-      calc(-200vh * var(--frame-shine-progress));
-    will-change: background-position;
-    /* 顺序要紧：mask 简写会把 mask-composite 复位，longhand 必须写在简写之后 */
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-  }
-
-  /* 四角补角片：把内沿转角修成圆角。它们使用与环体完全相同的视口渐变
-     尺寸和进度，mask 只留弧线以外的部分，弧线以内保持透明。 */
-  .page-shine > i {
-    position: absolute;
-    width: calc(var(--frame-shine-width, 5px) + var(--frame-shine-radius, 18px));
-    height: calc(var(--frame-shine-width, 5px) + var(--frame-shine-radius, 18px));
-    background-image: linear-gradient(
-      115deg,
-      var(--brand-cyan, #38b7d1) 0%,
-      var(--brand-blue, #2f7fd0) 11%,
-      var(--brand-gold, #f4c64f) 22%,
-      var(--brand-coral, #dc554c) 33%,
-      var(--brand-orange, #ff7a38) 44%,
-      var(--brand-cyan, #38b7d1) 55%,
-      var(--brand-blue, #2f7fd0) 66%,
-      var(--brand-gold, #f4c64f) 77%,
-      var(--brand-coral, #dc554c) 88%,
-      var(--brand-orange, #ff7a38) 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 300vw 300vh;
-    background-attachment: fixed;
-    background-position: calc(-200vw * var(--frame-shine-progress))
-      calc(-200vh * var(--frame-shine-progress));
-  }
-
-  .page-shine > i:nth-of-type(1) {
-    top: 0;
-    left: 0;
-    -webkit-mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 100% 100%,
-      transparent 98%,
-      #000 100%
-    );
-    mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 100% 100%,
-      transparent 98%,
-      #000 100%
-    );
-  }
-
-  .page-shine > i:nth-of-type(2) {
-    top: 0;
-    right: 0;
-    -webkit-mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 0% 100%,
-      transparent 98%,
-      #000 100%
-    );
-    mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 0% 100%,
-      transparent 98%,
-      #000 100%
-    );
-  }
-
-  .page-shine > i:nth-of-type(3) {
-    bottom: 0;
-    left: 0;
-    -webkit-mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 100% 0%,
-      transparent 98%,
-      #000 100%
-    );
-    mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 100% 0%,
-      transparent 98%,
-      #000 100%
-    );
-  }
-
-  .page-shine > i:nth-of-type(4) {
-    bottom: 0;
-    right: 0;
-    -webkit-mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 0% 0%,
-      transparent 98%,
-      #000 100%
-    );
-    mask: radial-gradient(
-      circle var(--frame-shine-radius, 18px) at 0% 0%,
-      transparent 98%,
-      #000 100%
-    );
-  }
-
-  /* 标签页切到后台由 main.js 加 is-idle：这条渐变一直在重绘，后台空转没意义 */
-  .page-shine.is-idle {
-    animation-play-state: paused;
-  }
-
-  @keyframes page-shine-progress {
-    0% {
-      --frame-shine-progress: 0;
-    }
-
-    50% {
-      --frame-shine-progress: 1;
-    }
-
-    100% {
-      --frame-shine-progress: 0;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .intro-screen {
-      visibility: hidden;
-    }
-
-    .intro-screen * {
-      animation: none !important;
-    }
-
-    /* 不流动，但把渐变挪到中间：静态下四条边仍是一道彩色描边 */
-    .page-shine {
-      animation: none;
-      --frame-shine-progress: 0.5;
-    }
+  .intro-screen * {
+    animation: none !important;
   }
 }

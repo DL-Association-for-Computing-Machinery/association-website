@@ -5,6 +5,8 @@
 .workbuddy/
 .playwright-cli/
 draft_*/
+# 外部参考仓库：若再次在项目内克隆，防止其 .git 被主仓库吞入
+shadmin/
 node_modules/
 dist/
 .next/
