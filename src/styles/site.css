@@ -172,180 +172,179 @@ html.no-js.intro-active body {
 
 /* --------------------------------------------------------------------------
    #19 协会介绍 / 加入页正文，以及首页到内页的轻量互链
+   版式复用 Jasper 首页的 .about / .join / .bento-*，这里只补内页多出来的结构。
    -------------------------------------------------------------------------- */
 
-.route-stack {
-  display: grid;
-  gap: clamp(2rem, 5vh, 3.5rem);
-  margin-top: clamp(2rem, 5vh, 3.5rem);
+.about-page > .about,
+.join-page > .join {
+  padding-top: clamp(7rem, 18vh, 9.5rem);
 }
 
-.route-section {
-  display: grid;
-  gap: 1rem;
-}
-
-.route-section__title {
+.about-page .character-carousel-region {
   margin: 0;
-  color: var(--heading);
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
 }
 
-.route-section .empty-state {
-  margin-top: 0;
-}
-
-.about-media {
-  display: grid;
-  grid-template-columns: 9.5rem minmax(0, 1fr);
-  gap: 1.15rem 1.35rem;
-  align-items: center;
-}
-
-.about-media__logo {
-  width: 100%;
+.about-page__logo {
+  width: 5.75rem;
   height: auto;
-  border-radius: var(--radius-media);
+  border-radius: 1.15rem;
   background: var(--surface);
+  box-shadow: 0 0.75rem 2rem rgb(17 27 80 / 10%);
 }
 
-.about-media__photo-frame {
-  position: relative;
-  min-height: 16rem;
-  overflow: hidden;
-  border-radius: var(--radius-media);
-  background: var(--surface);
+.about-page__photo-slot {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
 }
 
-.about-media__photo {
+.about-page__photo {
   object-fit: cover;
   object-position: center 35%;
 }
 
-.about-copy {
+.about-page__section,
+.join-page__section {
+  position: relative;
   display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: clamp(1.75rem, 5vh, 3rem);
+  padding-block: clamp(2.5rem, 8vh, 5rem);
+  padding-inline: 1.25rem;
+}
+
+.about-page .bento-section,
+.join-page .bento-section {
+  padding-block: clamp(2.5rem, 8vh, 5rem);
+}
+
+.about-page .bento-grid,
+.join-page .bento-grid {
+  grid-auto-rows: minmax(13.5rem, auto);
+}
+
+.about-page .bento-card,
+.join-page .bento-card,
+.about-page__timeline .bento-card {
+  min-height: 13.5rem;
+}
+
+.about-page .bento-card__content,
+.join-page .bento-card__content,
+.about-page__timeline .bento-card__content {
+  pointer-events: auto;
+}
+
+.about-page .bento-card__description,
+.join-page .bento-card__description,
+.about-page__timeline .bento-card__description {
+  max-width: none;
+}
+
+.about-page .bento-card:is(:hover, :focus-within) .bento-card__content,
+.join-page .bento-card:is(:hover, :focus-within) .bento-card__content,
+.about-page__timeline .bento-card:is(:hover, :focus-within) .bento-card__content,
+.about-page .bento-card:is(:hover, :focus-within) .bento-card__icon,
+.join-page .bento-card:is(:hover, :focus-within) .bento-card__icon {
+  transform: none;
+}
+
+.about-page__timeline {
+  display: grid;
+  width: min(100%, 68rem);
   gap: 1rem;
-  max-width: 46rem;
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.about-copy p {
-  margin: 0;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.info-card {
-  display: grid;
-  align-content: start;
-  gap: 0.65rem;
-  min-height: 100%;
-  padding: 1.15rem 1.2rem;
-  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
-  border-radius: var(--radius-media);
-  background: color-mix(in srgb, var(--surface) 76%, transparent);
+.about-page__timeline .bento-card {
+  min-height: 0;
 }
 
-.info-card__title {
-  margin: 0;
-  color: var(--heading);
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.info-card__body {
-  margin: 0;
-  color: var(--text);
-  font-size: 0.98rem;
-  line-height: 1.7;
-}
-
-.info-card__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem 1.1rem;
-  margin: 0.15rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.info-card__links a,
-.page-cta a,
-.home-inline-link {
-  padding-bottom: 0.1rem;
-  border-bottom: 1px solid currentColor;
-  color: var(--link);
-}
-
-.info-card__links a:hover,
-.page-cta a:hover,
-.home-inline-link:hover {
-  color: var(--link-hover);
-}
-
-.timeline {
-  display: grid;
-  gap: 1.15rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline__item {
-  display: grid;
-  gap: 0.35rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--brand-cyan);
-}
-
-.timeline__date {
-  color: var(--muted);
+.about-page__date {
+  color: var(--brand-cyan);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
 }
 
-.timeline__title {
-  margin: 0;
-  color: var(--heading);
-  font-size: 1.05rem;
-  font-weight: 700;
+.about-page .empty-state,
+.join-page .empty-state {
+  width: min(100%, 68rem);
+  margin-top: 0;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 3%),
+    0 2px 4px rgb(0 0 0 / 5%),
+    0 12px 24px rgb(0 0 0 / 5%);
+  text-align: center;
+  justify-items: center;
 }
 
-.timeline__summary {
-  max-width: 46rem;
+html.theme-dark .about-page .empty-state,
+html.theme-dark .join-page .empty-state {
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: inset 0 -20px 80px -20px rgb(255 255 255 / 12%);
+}
+
+.join-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.join-page__contact {
+  width: min(100%, 68rem);
   margin: 0;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 3%),
+    0 2px 4px rgb(0 0 0 / 5%),
+    0 12px 24px rgb(0 0 0 / 5%);
   color: var(--text);
-  font-size: 0.98rem;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
   line-height: 1.7;
+  text-align: center;
+  text-wrap: pretty;
 }
 
-.contact-panel {
-  max-width: 46rem;
-  margin: 0;
-  padding: 1.15rem 1.2rem;
-  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
-  border-radius: var(--radius-media);
-  background: color-mix(in srgb, var(--surface) 76%, transparent);
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.75;
+html.theme-dark .join-page__contact {
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: inset 0 -20px 80px -20px rgb(255 255 255 / 12%);
 }
 
 .page-cta {
   margin: 0;
+}
+
+.about-page__cta {
+  display: grid;
+  justify-items: center;
+  padding: 0 1.25rem clamp(3rem, 8vh, 5.5rem);
+}
+
+.page-cta a,
+.home-inline-link,
+.join-page__links a {
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid currentColor;
+  color: var(--link);
+}
+
+.page-cta a:hover,
+.home-inline-link:hover,
+.join-page__links a:hover {
+  color: var(--link-hover);
 }
 
 .home-inline-link {
@@ -360,17 +359,12 @@ html.no-js.intro-active body {
 }
 
 @media (max-width: 48rem) {
-  .about-media,
-  .info-grid {
-    grid-template-columns: 1fr;
+  .about-page__photo-slot {
+    display: none;
   }
 
-  .about-media__logo {
-    width: min(7.5rem, 36vw);
-    justify-self: start;
-  }
-
-  .about-media__photo-frame {
-    min-height: 12.5rem;
+  .about-page .bento-grid,
+  .join-page .bento-grid {
+    grid-auto-rows: minmax(11rem, auto);
   }
 }

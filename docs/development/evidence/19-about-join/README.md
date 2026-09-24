@@ -1,8 +1,10 @@
 # #19 协会介绍与加入指引验收证据
 
-采集时间：2026-09-23。对应分支 `feature/19-about-join`。
+采集时间：2026-09-24。对应分支 `feature/19-about-join`。
 
 下面所有截图都是本地生产构建产物（`pnpm build` 后 `pnpm start -- -p 4173`）的运行结果，不是 `next dev`。采集脚本在仓库外的 `.playwright-cli/`（已 gitignore），不入库。
+
+本轮在保持 #19 文案口径不变的前提下，把 `/about`、`/join` 的版式改成与 Jasper-Liao2026 首页基线同一套语言：居中大标题、胶片轨道 / 窄屏相册、bento 卡片、加入区透视网格。
 
 ## 复现方式
 
@@ -28,6 +30,7 @@ pnpm start -- -p 4173
 | 图片替代文本                                               | Logo alt「东华理工大学计算机协会 Logo」；合照 alt「协会成员在教室内合影」                                                                                            |
 | 键盘路径                                                   | `desktop-1440-focus-about-join-cta.png`（「去加入我们」焦点环）；`desktop-1440-focus-join-empty.png`                                                                 |
 | 无 URL / 二维码 / 「正在招新」                             | 加入页只有公众号名称与无报名空状态                                                                                                                                   |
+| 版式沿用 Jasper 首页基线                                   | 介绍页大标题「这是我们」+ 胶片轨道；加入页 `dia-retro-grid` + 两行标题；方向 / 路径使用 `.bento-card`                                                                |
 
 ## 验证摘要
 
