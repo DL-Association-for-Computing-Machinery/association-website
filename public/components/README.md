@@ -55,13 +55,17 @@ new URL("./threeui-source/globe-study.html", document.currentScript.src).href;
 
 ## 加载方式与时序
 
-由 `src/app/_components/prototype-scripts.tsx` 按固定顺序注入 16 个 `<script>`：
+由 `src/app/_components/prototype-scripts.tsx` 用 Next `<Script strategy="afterInteractive">`
+注入 16 个脚本，构建时会一并产出 `<link rel="preload" as="script">`。
 
-1. 先注入全部 `dia-*` 与 `assets/icon-set.js`。
-2. 最后才注入 `threeui-*`（它们依赖前面的基础元素）。
+**唯一需要顺序的地方**：`assets/icon-set.js` 必须早于 `dia-icon-cloud.js`。
+`dia-icon-cloud` 在 `connectedCallback` 里同步读 `window.DIA_ICON_SET`，
+元素已由 SSR HTML 升级，没有重试机会 —— 读到空表就渲染成无图标的白板。
 
-脚本用 `async = false` 保持顺序，注入前检查 `data-prototype-src` 标记以避免
-React StrictMode 双重注册（重复 `customElements.define()` 会抛错）。
+顺序由「数组里排首位」+「`async={false}`」共同保证：动态插入的脚本默认
+`async=true`（下载完就执行），只靠数组顺序不成立。
+
+其余脚本互不依赖，包括 `threeui-*` 与 `dia-*`（它们之间没有任何引用）。
 
 ## 维护注意
 
