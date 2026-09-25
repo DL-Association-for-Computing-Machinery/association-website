@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "name": "desktop-1440-about.png",
+      "url": "http://127.0.0.1:4173/about",
+      "width": 1440,
+      "height": 900,
+      "overflowPx": 0
+    },
+    {
+      "name": "mobile-390-about.png",
+      "url": "http://127.0.0.1:4173/about",
+      "width": 390,
+      "height": 844,
+      "overflowPx": 0
+    },
+    {
+      "name": "desktop-1440-join.png",
+      "url": "http://127.0.0.1:4173/join",
+      "width": 1440,
+      "height": 900,
+      "overflowPx": 0
+    },
+    {
+      "name": "mobile-390-join.png",
+      "url": "http://127.0.0.1:4173/join",
+      "width": 390,
+      "height": 844,
+      "overflowPx": 0
+    },
+    {
+      "name": "desktop-1440-home-about-link.png",
+      "url": "http://127.0.0.1:4173/",
+      "width": 1440,
+      "height": 900,
+      "overflowPx": 0
+    },
+    {
+      "name": "desktop-1440-home-join-link.png",
+      "url": "http://127.0.0.1:4173/",
+      "width": 1440,
+      "height": 900,
+      "overflowPx": 0
+    },
+    {
+      "name": "mobile-390-home-about-link.png",
+      "url": "http://127.0.0.1:4173/",
+      "width": 390,
+      "height": 844,
+      "overflowPx": 0
+    },
+    {
+      "name": "mobile-390-home-join-link.png",
+      "url": "http://127.0.0.1:4173/",
+      "width": 390,
+      "height": 844,
+      "overflowPx": 0
+    }
+  ],
+  "joinFocus": "去加入我们"
+}

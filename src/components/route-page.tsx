@@ -1,4 +1,5 @@
 import { EmptyState, type EmptyStateAction } from "./empty-state";
+import { RouteHeader } from "./route-header";
 import { findPageById, type SitePageId } from "@/lib/site-navigation";
 
 /**
@@ -24,7 +25,7 @@ export interface RoutePageProps {
   readonly related?: readonly RouteLink[];
 }
 
-function toAction(link: RouteLink): EmptyStateAction {
+export function toRouteAction(link: RouteLink): EmptyStateAction {
   if (typeof link !== "string") {
     return link;
   }
@@ -51,16 +52,15 @@ export function RoutePage({
   emptyBody,
   related = [],
 }: RoutePageProps) {
-  const actions: EmptyStateAction[] = [...related.map(toAction), { href: "/", label: "返回首页" }];
+  const actions: EmptyStateAction[] = [
+    ...related.map(toRouteAction),
+    { href: "/", label: "返回首页" },
+  ];
 
   return (
     <main id="main" className="route-main">
       <div className="route-inner">
-        <div className="route-head">
-          <p className="route-kicker">{kicker}</p>
-          <h1 className="route-title">{title}</h1>
-          <p className="route-summary">{summary}</p>
-        </div>
+        <RouteHeader kicker={kicker} title={title} summary={summary} />
 
         <EmptyState title={emptyTitle} body={emptyBody} actions={actions} />
       </div>

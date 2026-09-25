@@ -1,10 +1,11 @@
 /* 主站在首页基线之外新增的样式。
  *
- * 只放四类东西，其余一律改动 styles/prototype.css：
+ * 只放下列几类东西，其余一律改动 styles/prototype.css：
  * 1. 无脚本与「本轮跳过开屏」的降级；
  * 2. 六类路由带来的内页结构与空状态；
  * 3. 顶栏 Dock 与页脚导航的「当前页」状态（基线的 [aria-current="location"] 只管首页区块）；
- * 4. 首页区块在基线没有覆盖到的状态，例如荣誉摘要条数为 0 时的占位。
+ * 4. 首页区块在基线没有覆盖到的状态，例如荣誉摘要条数为 0 时的占位；
+ * 5. 协会介绍与加入页正文，以及首页到这两页的轻量互链。
  */
 
 /* --------------------------------------------------------------------------
@@ -167,4 +168,203 @@ html.no-js.intro-active body {
   border-bottom-color: var(--brand-cyan);
   color: var(--closing-strong);
   font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   #19 协会介绍 / 加入页正文，以及首页到内页的轻量互链
+   版式复用 Jasper 首页的 .about / .join / .bento-*，这里只补内页多出来的结构。
+   -------------------------------------------------------------------------- */
+
+.about-page > .about,
+.join-page > .join {
+  padding-top: clamp(7rem, 18vh, 9.5rem);
+}
+
+.about-page .character-carousel-region {
+  margin: 0;
+}
+
+.about-page__logo {
+  width: 5.75rem;
+  height: auto;
+  border-radius: 1.15rem;
+  background: var(--surface);
+  box-shadow: 0 0.75rem 2rem rgb(17 27 80 / 10%);
+}
+
+.about-page__photo-slot {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.about-page__photo {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.about-page__section,
+.join-page__section {
+  position: relative;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: clamp(1.75rem, 5vh, 3rem);
+  padding-block: clamp(2.5rem, 8vh, 5rem);
+  padding-inline: 1.25rem;
+}
+
+.about-page .bento-section,
+.join-page .bento-section {
+  padding-block: clamp(2.5rem, 8vh, 5rem);
+}
+
+.about-page .bento-grid,
+.join-page .bento-grid {
+  grid-auto-rows: minmax(13.5rem, auto);
+}
+
+.about-page .bento-card,
+.join-page .bento-card,
+.about-page__timeline .bento-card {
+  min-height: 13.5rem;
+}
+
+.about-page .bento-card__content,
+.join-page .bento-card__content,
+.about-page__timeline .bento-card__content {
+  pointer-events: auto;
+}
+
+.about-page .bento-card__description,
+.join-page .bento-card__description,
+.about-page__timeline .bento-card__description {
+  max-width: none;
+}
+
+.about-page .bento-card:is(:hover, :focus-within) .bento-card__content,
+.join-page .bento-card:is(:hover, :focus-within) .bento-card__content,
+.about-page__timeline .bento-card:is(:hover, :focus-within) .bento-card__content,
+.about-page .bento-card:is(:hover, :focus-within) .bento-card__icon,
+.join-page .bento-card:is(:hover, :focus-within) .bento-card__icon {
+  transform: none;
+}
+
+.about-page__timeline {
+  display: grid;
+  width: min(100%, 68rem);
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-page__timeline .bento-card {
+  min-height: 0;
+}
+
+.about-page__date {
+  color: var(--brand-cyan);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.about-page .empty-state,
+.join-page .empty-state {
+  width: min(100%, 68rem);
+  margin-top: 0;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 3%),
+    0 2px 4px rgb(0 0 0 / 5%),
+    0 12px 24px rgb(0 0 0 / 5%);
+  text-align: center;
+  justify-items: center;
+}
+
+html.theme-dark .about-page .empty-state,
+html.theme-dark .join-page .empty-state {
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: inset 0 -20px 80px -20px rgb(255 255 255 / 12%);
+}
+
+.join-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.1rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.join-page__contact {
+  width: min(100%, 68rem);
+  margin: 0;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 3%),
+    0 2px 4px rgb(0 0 0 / 5%),
+    0 12px 24px rgb(0 0 0 / 5%);
+  color: var(--text);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+html.theme-dark .join-page__contact {
+  border: 1px solid rgb(255 255 255 / 10%);
+  box-shadow: inset 0 -20px 80px -20px rgb(255 255 255 / 12%);
+}
+
+.page-cta {
+  margin: 0;
+}
+
+.about-page__cta {
+  display: grid;
+  justify-items: center;
+  padding: 0 1.25rem clamp(3rem, 8vh, 5.5rem);
+}
+
+.page-cta a,
+.home-inline-link,
+.join-page__links a {
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid currentColor;
+  color: var(--link);
+}
+
+.page-cta a:hover,
+.home-inline-link:hover,
+.join-page__links a:hover {
+  color: var(--link-hover);
+}
+
+.home-inline-link {
+  justify-self: center;
+  width: fit-content;
+}
+
+.home-inline-link--on-join {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.15rem;
+}
+
+@media (max-width: 48rem) {
+  .about-page__photo-slot {
+    display: none;
+  }
+
+  .about-page .bento-grid,
+  .join-page .bento-grid {
+    grid-auto-rows: minmax(11rem, auto);
+  }
 }
