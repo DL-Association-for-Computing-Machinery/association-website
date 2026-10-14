@@ -1,0 +1,155 @@
+{
+  "previews": [
+    {
+      "limit": 0,
+      "introEnded": true,
+      "heading": "我们赢得",
+      "items": 0,
+      "events": [],
+      "lastItemOpacity": null,
+      "list": null,
+      "emptyListPresent": false,
+      "emptyState": {
+        "present": true,
+        "text": "荣誉摘要待来源登记后填充：本区块只收录已核验来源的成绩。",
+        "width": 480
+      },
+      "section": {
+        "width": 1440,
+        "height": 833
+      },
+      "globeFrames": 1,
+      "overflow": 0
+    },
+    {
+      "limit": 1,
+      "introEnded": true,
+      "heading": "我们赢得",
+      "items": 1,
+      "events": ["2025 CCPC · 全国邀请赛（南昌）"],
+      "lastItemOpacity": "1",
+      "list": {
+        "width": 480,
+        "height": 63
+      },
+      "emptyListPresent": false,
+      "emptyState": {
+        "present": false,
+        "text": null,
+        "width": null
+      },
+      "section": {
+        "width": 1440,
+        "height": 833
+      },
+      "globeFrames": 1,
+      "overflow": 0
+    },
+    {
+      "limit": 2,
+      "introEnded": true,
+      "heading": "我们赢得",
+      "items": 2,
+      "events": ["2025 CCPC · 全国邀请赛（南昌）", "第十五届蓝桥杯 · B 组"],
+      "lastItemOpacity": "1",
+      "list": {
+        "width": 480,
+        "height": 136
+      },
+      "emptyListPresent": false,
+      "emptyState": {
+        "present": false,
+        "text": null,
+        "width": null
+      },
+      "section": {
+        "width": 1440,
+        "height": 833
+      },
+      "globeFrames": 1,
+      "overflow": 0
+    },
+    {
+      "limit": 3,
+      "introEnded": true,
+      "heading": "我们赢得",
+      "items": 3,
+      "events": ["2025 CCPC · 全国邀请赛（南昌）", "第十五届蓝桥杯 · B 组", "2024 天梯赛"],
+      "lastItemOpacity": "1",
+      "list": {
+        "width": 480,
+        "height": 208
+      },
+      "emptyListPresent": false,
+      "emptyState": {
+        "present": false,
+        "text": null,
+        "width": null
+      },
+      "section": {
+        "width": 1440,
+        "height": 833
+      },
+      "globeFrames": 1,
+      "overflow": 0
+    },
+    {
+      "limit": 4,
+      "introEnded": true,
+      "heading": "我们赢得",
+      "items": 4,
+      "events": [
+        "2025 CCPC · 全国邀请赛（南昌）",
+        "第十五届蓝桥杯 · B 组",
+        "2024 天梯赛",
+        "2024 ICPC · 全国邀请赛（陕西）"
+      ],
+      "lastItemOpacity": "1",
+      "list": {
+        "width": 480,
+        "height": 281
+      },
+      "emptyListPresent": false,
+      "emptyState": {
+        "present": false,
+        "text": null,
+        "width": null
+      },
+      "section": {
+        "width": 1440,
+        "height": 833
+      },
+      "globeFrames": 1,
+      "overflow": 0
+    }
+  ],
+  "console": [],
+  "errors": [],
+  "builds": [
+    {
+      "limit": 0,
+      "routes": ["/", "/_not-found", "/about", "/activities", "/honors", "/join", "/knowledge"],
+      "allStatic": true
+    },
+    {
+      "limit": 1,
+      "routes": ["/", "/_not-found", "/about", "/activities", "/honors", "/join", "/knowledge"],
+      "allStatic": true
+    },
+    {
+      "limit": 2,
+      "routes": ["/", "/_not-found", "/about", "/activities", "/honors", "/join", "/knowledge"],
+      "allStatic": true
+    },
+    {
+      "limit": 3,
+      "routes": ["/", "/_not-found", "/about", "/activities", "/honors", "/join", "/knowledge"],
+      "allStatic": true
+    },
+    {
+      "limit": 4,
+      "routes": ["/", "/_not-found", "/about", "/activities", "/honors", "/join", "/knowledge"],
+      "allStatic": true
+    }
+  ]
+}
